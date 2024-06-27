@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { MdMenu, MdClose } from "react-icons/md";
+import logo from "../img/LogoLouvre.png";
 
 const Nav = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -11,6 +12,9 @@ const Nav = () => {
 
   return (
     <nav>
+      <Link to="/">
+        <img id="logo" src={logo} alt="Louvre Museum logo" />
+      </Link>
       <button
         className="mobile-nav-toggle-btn"
         aria-controls="primary-navigation"
@@ -28,11 +32,11 @@ const Nav = () => {
           <li className="active">Home</li>
         </Link>
         <a href="#about">
-          <li className="active">About</li>
+          <li className="active">Visit</li>
         </a>
-        <li className="active">Projects</li>
+        <li className="active">Exhibitions</li>
         <Link to="/contact">
-          <li className="active">Contact</li>
+          <li className="active">Tickets</li>
         </Link>
       </ul>
     </nav>

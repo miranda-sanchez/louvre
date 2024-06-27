@@ -12,17 +12,27 @@
     background-repeat: no-repeat;
 
     @include flexbox(flex, space-around, center);
-    flex-direction: column;
-    
-    .hero-text {
-        
-        h1 {
-            font-size: 3rem;
-        }
+    flex-direction: column;h1 {
+        font-size: 3rem;
     }
+
+    h1 {
+        max-width: 400px;
+    }
+    button {
+        margin-top: 1rem;
+    }
+
+    figure {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        
         img {
             height: 60vh;
+            margin-top: -100px; 
             padding-top: 0;
+        }
     }
     
 }
@@ -32,10 +42,14 @@
         padding-top: 5rem;
 
         flex-direction: row;
-
-        img {
-            height: 90vh;
-            padding-top: 3rem;
+        figure {
+            justify-content: center;
+            width: auto;
+            img {
+                height: 90vh;
+                padding-top: 3rem;
+                margin-top: 0; 
+            }
         }
     }
 

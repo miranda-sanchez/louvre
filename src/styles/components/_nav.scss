@@ -1,14 +1,18 @@
 @use "../base/colors" as *;
 
 nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .mobile-nav-toggle-btn {
         display: none;
     }
     .primary-navigation {
         background-color: transparent;
+        
         display: flex;
         gap: var(--gap, 2rem);
-
+        margin-left: var(--gap, 2rem);
         li{
             position: relative;
             cursor: pointer;
@@ -20,7 +24,6 @@ nav {
             left: 50%;
             transform: translateX(-50%);
             width: 90px;
-            
         }
         li:hover .img-hover-underlined {
             display: block;
@@ -43,7 +46,6 @@ nav {
             width: 2rem;
             aspect-ratio: 1;
 
-            top: 3rem;
             right: 2rem;
             
             z-index: 999999;
@@ -54,10 +56,13 @@ nav {
                 display: none;
             }
             
+            &:hover {
+                background-color: transparent;
+            }
         }
 
         .primary-navigation {
-            background-color: rgba($bg, 0.9);
+            background-color: rgba($bg, 0.95);
             --gap: 3rem;
     
             position: fixed;

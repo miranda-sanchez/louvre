@@ -6,7 +6,9 @@ const Hero = () => {
   return (
     <section className="Hero">
       <div className="hero-text">
-        <h1>Welcome to the Louvre</h1>
+        <h1>
+          Welcome to the <strong>Louvre</strong>
+        </h1>
         <button>
           Our galery <MdNorthEast />
         </button>

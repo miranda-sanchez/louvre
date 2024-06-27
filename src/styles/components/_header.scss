@@ -2,7 +2,7 @@
 
 .Header {
     max-width: 1800px;
-    padding: 3rem 2rem;
+    padding: 2rem;
     width: 100%;
 
     @include flexbox(flex, flex-start, center);
@@ -12,6 +12,5 @@
 
     #logo {
         height: 3rem;
-        margin-right: 1rem;
     }
 }
