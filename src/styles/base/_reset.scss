@@ -1,0 +1,76 @@
+@use "_colors" as *;
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,400;0,700;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+  font-family: "Roboto", serif;
+  font-size: 16px;
+  line-height: 1.6;
+
+  overflow-x: hidden;
+  
+  background-color: $bg;
+  color: $light;
+}
+
+.App {
+  max-width: 1800px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+main {
+  flex: 1;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.6;
+  padding-top: 0.2em 0;
+}
+
+a, a:active, a:visited, a:hover{
+  text-decoration: none;
+  color: $light;
+}
+
+ul{
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+
+.sr-only {
+  display: none;
+}
+
+p {
+  max-width: 900px;
+  margin-top: 1rem;
+}
+
+
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+}
