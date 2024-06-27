@@ -1,16 +1,26 @@
 @use "../base/mixins" as *;
+@use "../base/colors" as *;
 
 .Header {
     max-width: 1800px;
     padding: 2rem;
     width: 100%;
 
+
     @include flexbox(flex, flex-start, center);
-    background-color: transparent;
     position: fixed;
     top: 0;
+
+    
 
     #logo {
         height: 3rem;
     }
+}
+
+.scrolled {
+    background-color: rgba($bg, 0.95); 
+    padding: 1rem 2rem;
+
+    transition: 0.5s ease-out;
 }

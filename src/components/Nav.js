@@ -34,9 +34,11 @@ const Nav = () => {
         <a href="#about">
           <li className="active">Visit</li>
         </a>
-        <li className="active">Exhibitions</li>
-        <Link to="/contact">
-          <li className="active">Tickets</li>
+        <a href="#exhibitions">
+          <li className="active">Exhibitions</li>
+        </a>
+        <Link to="/">
+          <li className="active tickets">Tickets</li>
         </Link>
       </ul>
     </nav>

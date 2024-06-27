@@ -6,12 +6,17 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: transparent;
   position: fixed;
   top: 0;
 }
 .Header #logo {
   height: 3rem;
+}
+
+.scrolled {
+  background-color: rgba(39, 39, 39, 0.95);
+  padding: 1rem 2rem;
+  transition: 0.5s ease-out;
 }
 
 nav {
@@ -31,17 +36,15 @@ nav .primary-navigation {
 nav .primary-navigation li {
   position: relative;
   cursor: pointer;
+  padding: 2px;
 }
-nav .primary-navigation li .img-hover-underlined {
-  display: none;
-  position: absolute;
-  bottom: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90px;
+nav .primary-navigation .tickets {
+  background-color: #016659;
+  padding: 2px 20px;
+  border-radius: 20px;
 }
-nav .primary-navigation li:hover .img-hover-underlined {
-  display: block;
+nav .primary-navigation .tickets:hover {
+  background-color: rgba(1, 102, 89, 0.9);
 }
 
 @media (max-width: 35em) {
@@ -77,9 +80,6 @@ nav .primary-navigation li:hover .img-hover-underlined {
   }
   nav .primary-navigation li {
     text-align: center;
-  }
-  nav .primary-navigation li:hover .img-hover-underlined {
-    display: none;
   }
   nav .primary-navigation.open {
     transform: translateX(0);
@@ -154,7 +154,7 @@ body {
 
 .App {
   max-width: 1800px;
-  min-height: 100vh;
+  min-height: 200vh;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
