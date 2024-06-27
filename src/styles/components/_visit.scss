@@ -1,0 +1,26 @@
+@use "../base/mixins" as *;
+@use "../base/colors" as *;
+
+.Visit {
+    height: 100vh;
+    background-image: url("img/LovreInside.webp");
+    background-attachment: fixed;
+    background-position: center;
+    @include flexbox(flex, center, center);
+
+    
+    div {
+        background-color: rgba($light, 0.9);
+        color: $bg;
+
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+
+        padding: 2rem;
+        border-radius: 50px 0 50px 0;
+
+        cursor: pointer;
+        
+    }
+
+}

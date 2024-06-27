@@ -1,5 +1,5 @@
 @use "_colors" as *;
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 
 * {
     box-sizing: border-box;
@@ -12,7 +12,7 @@ html {
   }
 
 body {
-  font-family: "Playfair Display", serif;
+  font-family: "Red Hat Display", sans-serif;
   font-size: 16px;
   line-height: 1.6;
 
@@ -35,8 +35,9 @@ main {
 
 }
 
-h1 {
+h1, h2 {
   letter-spacing: 0.1rem;
+  font-family: "Playfair Display", serif;
 }
 
 p {
@@ -78,10 +79,9 @@ strong {
 
 button {
   padding: 10px 20px;
-  text-transform: uppercase;
 
   font-size: 1rem;
-  font-family: "Playfair Display", serif;
+  font-family: "Red Hat Display", sans-serif;
 
   cursor: pointer;
   background-color: rgba($dark, 0.7);
