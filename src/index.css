@@ -139,9 +139,6 @@ nav .primary-navigation .tickets:hover {
   margin: 0 auto;
   padding: 4rem 2rem;
 }
-.Exhibitions h2 {
-  text-align: center;
-}
 .Exhibitions .cards {
   display: flex;
   justify-content: space-around;
@@ -200,13 +197,32 @@ nav .primary-navigation .tickets:hover {
   align-items: center;
 }
 .Visit div {
-  background-color: rgba(229, 229, 229, 0.9);
+  background-color: rgba(229, 229, 229, 0.95);
   color: #272727;
   font-family: "Playfair Display", serif;
   font-weight: 700;
   padding: 2rem;
   border-radius: 50px 0 50px 0;
   cursor: pointer;
+}
+
+.Colection {
+  margin: 2rem;
+}
+.Colection .collection-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.Colection .collection-container .collection-item {
+  flex: 1 1 calc(33.333% - 20px);
+}
+.Colection .collection-container .collection-item img {
+  max-width: 100%;
+  height: auto;
+  height: auto;
 }
 
 * {
@@ -243,6 +259,10 @@ main {
 h1, h2 {
   letter-spacing: 0.1rem;
   font-family: "Playfair Display", serif;
+}
+
+h2 {
+  text-align: center;
 }
 
 p {

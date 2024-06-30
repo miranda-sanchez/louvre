@@ -6,9 +6,6 @@
     margin: 0 auto;
     padding: 4rem 2rem;
 
-    h2 { 
-        text-align: center
-    }
     .cards {
         @include flexbox(flex, space-around, center);
         flex-direction: column;

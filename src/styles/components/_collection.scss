@@ -1,0 +1,19 @@
+@use "../base/mixins" as *;
+
+.Colection {
+    margin: 2rem;
+    .collection-container {
+        @include flexbox(flex, center, center);
+        flex-wrap: wrap;
+        gap: 20px;
+        .collection-item {
+            flex: 1 1 calc(33.333% - 20px);
+            img {
+                max-width: 100%;
+                height: auto;
+  height: auto;
+            }
+
+        }
+    }
+}
