@@ -2,7 +2,7 @@ import React from "react";
 import { useInView } from "react-intersection-observer";
 import Velazquez from "../img/VelazquezMariaTeresa.jpg";
 import Degas from "../img/DegasMaryCassatt.jpg";
-import Michaelangelo from "../img/Sculpture.jpg";
+import Michaelangelo from "../img/img8.jpg";
 
 const Exhibitions = () => {
   const { ref: velazquezRef, inView: velazquezInView } = useInView({

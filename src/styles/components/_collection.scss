@@ -1,4 +1,5 @@
 @use "../base/mixins" as *;
+@use "../base/colors" as *;
 
 .Collection {
   margin: 2rem;
@@ -9,41 +10,56 @@
   .collection-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 10px;
-    column-gap: 10px;
+    gap: 20px;
+    column-gap: 20px;
     
         .collection-item {
-            width: 100%;
             position: relative;
             overflow: hidden;
+
             border-radius: 10px;
-            
             img {
-                max-width: 100%;
+                width: 100%;
                 height: auto;
                 display: block;
-                transition: transform 0.3s ease;
-
-                
+                transition: 0.3s ease;
+                object-fit: cover;
             }
 
             &:hover img {
-                transform: scale(1.05); 
+                filter: brightness(80%);
+            }
+
+            &:hover .item-info {
+                visibility: visible;
+                opacity: 1;
+                transform: translateY(0);
             }
 
             .item-info {
-
             padding: 10px;
+            width: 100%;
+
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            background-color: rgba($bg, 0.8);
+    
+    
+            opacity: 0;
+            transform: translateY(10%);
+            visibility: hidden;
+            transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.1s ease;
+            
 
                 .title {
-                    font-size: 1.2rem;
-                    font-weight: bold;
                     margin-top: 0.5rem;
+                    font-size: 1.2rem;
                 }
 
                 .description {
-                    font-size: 1rem;
-                    margin-top: 0.5rem;
+                    margin-top: 0.2rem;
                 }
             }
         }
