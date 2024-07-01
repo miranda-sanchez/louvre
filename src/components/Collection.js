@@ -1,6 +1,8 @@
 import React from "react";
 import img1 from "../img/img1.jpg";
 import img2 from "../img/img2.jpg";
+import img3 from "../img/img3.jpg";
+import img4 from "../img/img4.jpg";
 
 const Collection = () => {
   const items = [
@@ -18,14 +20,15 @@ const Collection = () => {
     },
     {
       id: 3,
-      img: img2,
-      title: "The Wedding Feast at Cana",
+      img: img3,
+      title: "Winged Victory of Samothrace",
       description: "Descripción del artículo 2",
     },
+
     {
       id: 4,
-      img: img2,
-      title: "The Wedding Feast at Cana",
+      img: img4,
+      title: "Mona Lisa",
       description: "Descripción del artículo 2",
     },
     {
@@ -37,17 +40,21 @@ const Collection = () => {
   ];
 
   return (
-    <section className="Colection">
+    <section className="Collection">
       <h2>Collection</h2>
-      <div className="collection-container">
-        {items.map((item) => (
-          <article className="collection-item">
-            <span className="id">{item.id}</span>
-            <img src={item.img} alt={item.titulo} />
-            <span className="title">{item.title}</span>
-            <p className="description">{item.description}</p>
-          </article>
-        ))}
+      <div className="masonry-gallery">
+        <div className="collection-container">
+          {items.map((item) => (
+            <article className="collection-item">
+              <span className="id">{item.id}</span>
+              <img src={item.img} alt={item.titulo} />
+              <div className="item-info">
+                <span className="title">{item.title}</span>
+                <p className="description">{item.description}</p>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

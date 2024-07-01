@@ -206,25 +206,61 @@ nav .primary-navigation .tickets:hover {
   cursor: pointer;
 }
 
-.Colection {
+.Collection {
   margin: 2rem;
 }
-.Colection .collection-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
+.Collection .masonry-gallery {
+  columns: 1;
 }
-.Colection .collection-container .collection-item {
-  flex: 1 1 calc(33.333% - 20px);
+.Collection .masonry-gallery .collection-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+  column-gap: 10px;
 }
-.Colection .collection-container .collection-item img {
+.Collection .masonry-gallery .collection-container .collection-item {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.Collection .masonry-gallery .collection-container .collection-item img {
   max-width: 100%;
   height: auto;
-  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.Collection .masonry-gallery .collection-container .collection-item:hover img {
+  transform: scale(1.05);
+}
+.Collection .masonry-gallery .collection-container .collection-item .item-info {
+  padding: 10px;
+}
+.Collection .masonry-gallery .collection-container .collection-item .item-info .title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+.Collection .masonry-gallery .collection-container .collection-item .item-info .description {
+  font-size: 1rem;
+  margin-top: 0.5rem;
 }
 
+@media (min-width: 768px) {
+  .Collection .masonry-gallery {
+    columns: 2;
+  }
+}
+@media (min-width: 992px) {
+  .Collection .masonry-gallery {
+    columns: 3;
+  }
+}
+@media (min-width: 1200px) {
+  .Collection .masonry-gallery {
+    columns: 4;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
