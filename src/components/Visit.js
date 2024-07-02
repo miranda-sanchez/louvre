@@ -2,7 +2,7 @@ import React from "react";
 
 const Visit = () => {
   return (
-    <section className="Visit">
+    <section className="Visit" id="visit">
       <div>
         Explore the <strong>Salle des Cariatides</strong>
       </div>

@@ -8,16 +8,81 @@ footer {
     flex-direction: column;
 
     margin-top: 1rem;
-    padding-top: 1rem;
+    padding: 1rem 2rem;
+   
+    h2 {
+        text-align: left;
+    }
 
-    
-    .socialmedia-footer {
-        @include flexbox(flex, center, center);
-        li {
-            margin-left: 1rem;
-            a {
-                color: $bg;
+    .faq {
+        width: 100%;
+        .accordion-container {
+            margin: 0 auto;
+            padding-bottom: 2rem;
+            width: 100%;
+            //.accordion-header, .accordion-button and .accordion-body are built-in bootstrap classes
+        .accordion-item {
+            border: none;
+            border-top: 1px solid $bg;
+            border-radius: 0;
+            &:last-child {
+                border-bottom: 1px solid $bg;
+            }
+        }
+            .accordion-header {
+                border-radius: 20px;
+
+                .accordion-button {
+                    font-weight: 700;
+                    background-color: $light;
+                    &:focus {
+                        box-shadow: none;
+                    }
+                    &[aria-expanded="true"] {
+                        color: $action; 
+                    }
+                }
+            }
+
+            .accordion-body {
+                background-color: $light;
+                p {
+                    margin-top: 0;
+                }
+                ul {
+                    margin-left: 2rem;
+                    li {
+                    list-style-type: circle;
+                    list-style-position: inside
+                    }
+                }
             }
         }
     }
+
+    .social-media {
+        width: 100%;
+        .socialmedia-list {
+            @include flexbox(flex, center, center);
+            width: 100%;
+            li {
+                margin-left: 1rem;
+                a {
+                    color: $bg;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) { 
+    footer {
+        .faq, .social-media {
+            max-width: 1200px;
+        }
+        .faq {
+            display: flex;
+        }
+    }
+
 }

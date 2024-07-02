@@ -31,7 +31,7 @@ const Nav = () => {
         <Link exact to="/">
           <li className="active">Home</li>
         </Link>
-        <a href="#about">
+        <a href="#visit">
           <li className="active">Visit</li>
         </a>
         <a href="#exhibitions">

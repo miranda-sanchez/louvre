@@ -272,20 +272,77 @@ footer {
   align-items: center;
   flex-direction: column;
   margin-top: 1rem;
-  padding-top: 1rem;
+  padding: 1rem 2rem;
 }
-footer .socialmedia-footer {
+footer h2 {
+  text-align: left;
+}
+footer .faq {
+  width: 100%;
+}
+footer .faq .accordion-container {
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  width: 100%;
+}
+footer .faq .accordion-container .accordion-item {
+  border: none;
+  border-top: 1px solid #272727;
+  border-radius: 0;
+}
+footer .faq .accordion-container .accordion-item:last-child {
+  border-bottom: 1px solid #272727;
+}
+footer .faq .accordion-container .accordion-header {
+  border-radius: 20px;
+}
+footer .faq .accordion-container .accordion-header .accordion-button {
+  font-weight: 700;
+  background-color: #E5E5E5;
+}
+footer .faq .accordion-container .accordion-header .accordion-button:focus {
+  box-shadow: none;
+}
+footer .faq .accordion-container .accordion-header .accordion-button[aria-expanded=true] {
+  color: #016659;
+}
+footer .faq .accordion-container .accordion-body {
+  background-color: #E5E5E5;
+}
+footer .faq .accordion-container .accordion-body p {
+  margin-top: 0;
+}
+footer .faq .accordion-container .accordion-body ul {
+  margin-left: 2rem;
+}
+footer .faq .accordion-container .accordion-body ul li {
+  list-style-type: circle;
+  list-style-position: inside;
+}
+footer .social-media {
+  width: 100%;
+}
+footer .social-media .socialmedia-list {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
-footer .socialmedia-footer li {
+footer .social-media .socialmedia-list li {
   margin-left: 1rem;
 }
-footer .socialmedia-footer li a {
+footer .social-media .socialmedia-list li a {
   color: #272727;
 }
 
+@media (min-width: 768px) {
+  footer .faq, footer .social-media {
+    max-width: 1200px;
+  }
+  footer .faq {
+    display: flex;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
