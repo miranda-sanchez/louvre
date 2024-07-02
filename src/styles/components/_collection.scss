@@ -1,86 +1,68 @@
-@use "../base/mixins" as *;
 @use "../base/colors" as *;
 
 .Collection {
   margin: 2rem;
-  
+    display: flex;
+    flex-direction: column;
   .masonry-gallery {
-    columns: 1;
+    display: flex;
+    margin-left: -20px; 
+    width: auto;
 
-  .collection-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    column-gap: 20px;
-    
-        .collection-item {
-            position: relative;
-            overflow: hidden;
+    .masonry-grid_column {
+      padding-left: 20px; 
+      background-clip: padding-box;
 
-            border-radius: 10px;
-            img {
-                width: 100%;
-                height: auto;
-                display: block;
-                transition: 0.3s ease;
-                object-fit: cover;
-            }
+      .collection-item {
+        margin-bottom: 20px; 
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
 
-            &:hover img {
-                filter: brightness(80%);
-            }
-
-            &:hover .item-info {
-                visibility: visible;
-                opacity: 1;
-                transform: translateY(0);
-            }
-
-            .item-info {
-            padding: 10px;
-            width: 100%;
-
-            position: absolute;
-            bottom: 0;
-            left: 0;
-
-            background-color: rgba($bg, 0.8);
-    
-    
-            opacity: 0;
-            transform: translateY(10%);
-            visibility: hidden;
-            transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.1s ease;
-            
-
-                .title {
-                    margin-top: 0.5rem;
-                    font-size: 1.2rem;
-                }
-
-                .description {
-                    margin-top: 0.2rem;
-                }
-            }
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+          transition: 0.3s ease;
+          object-fit: cover;
         }
-    }
-    }
-}
 
-@media (min-width: 768px) { 
-    .Collection .masonry-gallery {
-        columns: 2;
-    }
-}
+        &:hover img {
+          filter: brightness(80%);
+        }
 
-@media (min-width: 992px) { 
-    .Collection .masonry-gallery {
-        columns: 3;
-    }
-}
+        &:hover .item-info {
+          visibility: visible;
+          opacity: 1;
+          transform: translateY(0);
+        }
 
-@media (min-width: 1200px) { 
-    .Collection .masonry-gallery {
-        columns: 4;
+        .item-info {
+          padding: 10px;
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background-color: rgba($bg, 0.8);
+          opacity: 0;
+          transform: translateY(10%);
+          visibility: hidden;
+          transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.1s ease;
+
+          .title {
+            margin-top: 0.5rem;
+            font-size: 1.2rem;
+          }
+
+          .description {
+            margin-top: 0.2rem;
+          }
+        }
+      }
     }
+  }
+  
+  button {
+    margin: 0 auto;
+  }
 }

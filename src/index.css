@@ -137,7 +137,7 @@ nav .primary-navigation .tickets:hover {
 .Exhibitions {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
 }
 .Exhibitions .cards {
   display: flex;
@@ -208,37 +208,40 @@ nav .primary-navigation .tickets:hover {
 
 .Collection {
   margin: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 .Collection .masonry-gallery {
-  columns: 1;
+  display: flex;
+  margin-left: -20px;
+  width: auto;
 }
-.Collection .masonry-gallery .collection-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-  column-gap: 20px;
+.Collection .masonry-gallery .masonry-grid_column {
+  padding-left: 20px;
+  background-clip: padding-box;
 }
-.Collection .masonry-gallery .collection-container .collection-item {
+.Collection .masonry-gallery .masonry-grid_column .collection-item {
+  margin-bottom: 20px;
   position: relative;
   overflow: hidden;
   border-radius: 10px;
 }
-.Collection .masonry-gallery .collection-container .collection-item img {
+.Collection .masonry-gallery .masonry-grid_column .collection-item img {
   width: 100%;
   height: auto;
   display: block;
   transition: 0.3s ease;
   object-fit: cover;
 }
-.Collection .masonry-gallery .collection-container .collection-item:hover img {
+.Collection .masonry-gallery .masonry-grid_column .collection-item:hover img {
   filter: brightness(80%);
 }
-.Collection .masonry-gallery .collection-container .collection-item:hover .item-info {
+.Collection .masonry-gallery .masonry-grid_column .collection-item:hover .item-info {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
 }
-.Collection .masonry-gallery .collection-container .collection-item .item-info {
+.Collection .masonry-gallery .masonry-grid_column .collection-item .item-info {
   padding: 10px;
   width: 100%;
   position: absolute;
@@ -250,29 +253,39 @@ nav .primary-navigation .tickets:hover {
   visibility: hidden;
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.1s ease;
 }
-.Collection .masonry-gallery .collection-container .collection-item .item-info .title {
+.Collection .masonry-gallery .masonry-grid_column .collection-item .item-info .title {
   margin-top: 0.5rem;
   font-size: 1.2rem;
 }
-.Collection .masonry-gallery .collection-container .collection-item .item-info .description {
+.Collection .masonry-gallery .masonry-grid_column .collection-item .item-info .description {
   margin-top: 0.2rem;
 }
+.Collection button {
+  margin: 0 auto;
+}
 
-@media (min-width: 768px) {
-  .Collection .masonry-gallery {
-    columns: 2;
-  }
+footer {
+  background-color: #E5E5E5;
+  color: #272727;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1rem;
+  padding-top: 1rem;
 }
-@media (min-width: 992px) {
-  .Collection .masonry-gallery {
-    columns: 3;
-  }
+footer .socialmedia-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-@media (min-width: 1200px) {
-  .Collection .masonry-gallery {
-    columns: 4;
-  }
+footer .socialmedia-footer li {
+  margin-left: 1rem;
 }
+footer .socialmedia-footer li a {
+  color: #272727;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

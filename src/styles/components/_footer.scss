@@ -1,0 +1,23 @@
+@use "../base/mixins" as *;
+@use "../base/colors" as *;
+
+footer {
+    background-color: $light;
+    color: $bg;
+    @include flexbox(flex, center, center);
+    flex-direction: column;
+
+    margin-top: 1rem;
+    padding-top: 1rem;
+
+    
+    .socialmedia-footer {
+        @include flexbox(flex, center, center);
+        li {
+            margin-left: 1rem;
+            a {
+                color: $bg;
+            }
+        }
+    }
+}

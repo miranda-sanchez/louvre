@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <section className="Footer">
+    <footer className="Footer">
       <article>
         <ul className="socialmedia-footer">
           <li>
@@ -30,7 +30,7 @@ const Footer = () => {
       <article className="footer-bottom">
         <p>2024 &copy; Miranda Sánchez</p>
       </article>
-    </section>
+    </footer>
   );
 };
 

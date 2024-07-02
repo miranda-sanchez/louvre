@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import Masonry from "react-masonry-css";
 import img1 from "../img/img1.jpg";
 import img2 from "../img/img2.jpg";
 import img3 from "../img/img3.jpg";
@@ -26,7 +27,6 @@ const Collection = () => {
       title: "Winged Victory of Samothrace",
       description: "Descripción del artículo 2",
     },
-
     {
       img: img4,
       title: "Mona Lisa",
@@ -42,7 +42,6 @@ const Collection = () => {
       title: "The Seated Scribes",
       description: "Descripción del artículo 2",
     },
-    ,
     {
       img: img7,
       title: "Dying Slave",
@@ -60,22 +59,41 @@ const Collection = () => {
     },
   ];
 
+  const [visibleItems, setVisibleItems] = useState(5);
+
+  const loadMore = () => {
+    setVisibleItems((prevVisibleItems) => prevVisibleItems + 5);
+  };
+
+  const breakpointColumnsObj = {
+    default: 5,
+    1200: 4,
+    992: 3,
+    768: 2,
+    576: 1,
+  };
+
   return (
     <section className="Collection">
       <h2>Collection</h2>
-      <div className="masonry-gallery">
-        <div className="collection-container">
-          {items.map((item) => (
-            <article className="collection-item">
-              <img src={item.img} alt={item.titulo} />
-              <div className="item-info">
-                <h3 className="title">{item.title}</h3>
-                <p className="description">{item.description}</p>
-              </div>
-            </article>
-          ))}
-        </div>
-      </div>
+      <Masonry
+        breakpointCols={breakpointColumnsObj}
+        className="masonry-gallery"
+        columnClassName="masonry-grid_column"
+      >
+        {items.slice(0, visibleItems).map((item, index) => (
+          <article className="collection-item" key={index}>
+            <img src={item.img} alt={item.title} />
+            <div className="item-info">
+              <h3 className="title">{item.title}</h3>
+              <p className="description">{item.description}</p>
+            </div>
+          </article>
+        ))}
+      </Masonry>
+      {visibleItems < items.length && (
+        <button onClick={loadMore}>Load more</button>
+      )}
     </section>
   );
 };
