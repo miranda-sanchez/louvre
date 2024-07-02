@@ -37,7 +37,7 @@ const Nav = () => {
         <a href="#exhibitions">
           <li className="active">Exhibitions</li>
         </a>
-        <Link to="/">
+        <Link to="/tickets">
           <li className="active tickets">Tickets</li>
         </Link>
       </ul>

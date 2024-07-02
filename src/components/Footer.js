@@ -1,8 +1,40 @@
-import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import React, { useState, useEffect } from "react";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaTwitter,
+  FaYoutube,
+  FaLinkedin,
+  FaPinterest,
+} from "react-icons/fa";
 import { Accordion } from "react-bootstrap";
 
 const Footer = () => {
+  const [randomQuote, setRandomQuote] = useState("");
+
+  useEffect(() => {
+    const quotes = [
+      {
+        text: "What beauty is, I know not, thought it adheres to many things.",
+        author: "Albrecht Dürer",
+      },
+      {
+        text: "The true work of art is but a shadow of the divine perfection.",
+        author: "Michelangelo",
+      },
+      {
+        text: "The painter should paint not only what he has in front of him, but also what he sees inside himself.",
+        author: "Caspar David Friedrich",
+      },
+      {
+        text: "The act of painting is about one heart telling another heart where he found salvation.",
+        author: "Francisco Goya",
+      },
+    ];
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    setRandomQuote(quotes[randomIndex]);
+  }, []);
+
   return (
     <footer>
       <article className="faq">
@@ -148,30 +180,77 @@ const Footer = () => {
           </Accordion.Item>
         </Accordion>
       </article>
+      <div className="columns-footer">
+        <article className="quote">
+          <p>"{randomQuote.text}"</p>
+          <p>― {randomQuote.author}</p>
+        </article>
 
-      <article className="social-media">
-        <h2>Follow us</h2>
-        <ul className="socialmedia-list">
-          <li>
-            <a
-              href="https://www.linkedin.com/in/miranda--sanchez"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/miranda-sanchez"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub />
-            </a>
-          </li>
-        </ul>
-      </article>
+        <article className="social-media">
+          <h2>Follow us</h2>
+          <ul className="socialmedia-list">
+            <li>
+              <a
+                href="https://www.facebook.com/museedulouvre"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebook />
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.instagram.com/museelouvre/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaInstagram />
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://twitter.com/museelouvre"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaTwitter />
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.youtube.com/user/louvre"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaYoutube />
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.pinterest.fr/museedulouvre/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaPinterest />
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.linkedin.com/in/miranda--sanchez"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin />
+              </a>
+            </li>
+          </ul>
+        </article>
+      </div>
 
       <article className="footer-bottom">
         <p>2024 &copy; Miranda Sánchez</p>
