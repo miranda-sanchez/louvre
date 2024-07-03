@@ -95,6 +95,7 @@ nav .primary-navigation .tickets:hover {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -281,6 +282,9 @@ footer .faq {
 footer .faq h2 {
   text-align: left;
 }
+footer .faq p {
+  text-align: left;
+}
 footer .faq .accordion-container {
   margin: 0 auto;
   padding-bottom: 2rem;
@@ -465,6 +469,46 @@ button:hover {
     font-size: 18px;
     line-height: 1.6;
   }
+}
+.Tickets .tickets-content {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url("img/Garden.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+  padding: 7rem 2rem;
+}
+.Tickets .tickets-content h1 {
+  padding-bottom: 40vh;
+}
+.Tickets .tickets-content .tickets-body {
+  background-color: rgba(39, 39, 39, 0.8);
+  border-radius: 20px;
+  padding: 30px;
+}
+.Tickets .tickets-content .tickets-body h2 {
+  margin-bottom: 2rem;
+}
+.Tickets .tickets-content .tickets-body p {
+  margin: 0 auto;
+}
+.Tickets .tickets-content .tickets-body .tickets-options {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 2rem;
+}
+.Tickets .tickets-content .tickets-body .tickets-options article {
+  height: 300px;
+  padding: 20px;
+  background-color: rgba(39, 39, 39, 0.95);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.Tickets .tickets-prices {
+  margin: 2rem;
 }
 
 /*# sourceMappingURL=index.css.map */
