@@ -31,12 +31,12 @@ const Nav = () => {
         <Link exact to="/">
           <li className="active">Home</li>
         </Link>
-        <a href="#visit">
+        <Link to="/visit">
           <li className="active">Visit</li>
-        </a>
-        <a href="#exhibitions">
+        </Link>
+        <Link to="/exhibitions">
           <li className="active">Exhibitions</li>
-        </a>
+        </Link>
         <Link to="/tickets">
           <li className="active tickets">Tickets</li>
         </Link>

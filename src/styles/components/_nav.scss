@@ -1,29 +1,25 @@
 @use "../base/colors" as *;
+@use "../base/mixins" as *;
 
 nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    @include flexbox(flex, center, center);
     .mobile-nav-toggle-btn {
         display: none;
     }
     .primary-navigation {
         background-color: transparent;
-        
-        display: flex;
+        @include flexbox(flex, center, center);
         gap: var(--gap, 2rem);
+        margin: 0;
         margin-left: var(--gap, 2rem);
         li{
             position: relative;
             cursor: pointer;
             padding: 2px;
-
-            
         }
         .tickets {
             background-color: $action;
-            padding: 2px 20px;
+            padding: 5px 15px;
             border-radius: 20px;
 
             &:hover {

@@ -32,7 +32,10 @@ nav .mobile-nav-toggle-btn {
 nav .primary-navigation {
   background-color: transparent;
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: var(--gap, 2rem);
+  margin: 0;
   margin-left: var(--gap, 2rem);
 }
 nav .primary-navigation li {
@@ -42,7 +45,7 @@ nav .primary-navigation li {
 }
 nav .primary-navigation .tickets {
   background-color: #016659;
-  padding: 2px 20px;
+  padding: 5px 15px;
   border-radius: 20px;
 }
 nav .primary-navigation .tickets:hover {
@@ -470,7 +473,7 @@ button:hover {
     line-height: 1.6;
   }
 }
-.Tickets .tickets-content {
+.Tickets .tickets-header {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url("img/Garden.webp");
   background-repeat: no-repeat;
   background-size: cover;
@@ -478,37 +481,58 @@ button:hover {
   background-attachment: fixed;
   padding: 7rem 2rem;
 }
-.Tickets .tickets-content h1 {
+.Tickets .tickets-header h1 {
   padding-bottom: 40vh;
 }
-.Tickets .tickets-content .tickets-body {
+.Tickets .tickets-body {
   background-color: rgba(39, 39, 39, 0.8);
   border-radius: 20px;
   padding: 30px;
 }
-.Tickets .tickets-content .tickets-body h2 {
+.Tickets .tickets-body h2 {
   margin-bottom: 2rem;
 }
-.Tickets .tickets-content .tickets-body p {
+.Tickets .tickets-body p {
   margin: 0 auto;
 }
-.Tickets .tickets-content .tickets-body .tickets-options {
+.Tickets .tickets-body .tickets-options {
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 30px;
+  gap: 10px;
   margin-top: 2rem;
 }
-.Tickets .tickets-content .tickets-body .tickets-options article {
-  height: 300px;
+.Tickets .tickets-body .tickets-options article {
   padding: 20px;
   background-color: rgba(39, 39, 39, 0.95);
-  border-radius: 10px;
   cursor: pointer;
+  border-bottom: 1px solid rgba(229, 229, 229, 0.2);
+}
+.Tickets .tickets-body .tickets-options article:last-child {
+  border: none;
+}
+.Tickets .tickets-body .tickets-options article button {
+  margin-top: 1rem;
+}
+.Tickets .tickets-body .tickets-options article button:first-of-type {
+  margin-right: 1rem;
+  background-color: #016659;
+  border: 1px solid #016659;
 }
 .Tickets .tickets-prices {
   margin: 2rem;
+}
+
+@media (min-width: 890px) {
+  .Tickets .tickets-body .tickets-options {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: flex-start;
+  }
+  .Tickets .tickets-body .tickets-options article, .Tickets .tickets-body .tickets-options article:last-child {
+    min-height: 300px;
+    border: none;
+    border: 1px solid rgba(229, 229, 229, 0.2);
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
