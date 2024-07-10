@@ -16,7 +16,7 @@ const Exhibitions = () => {
   });
 
   return (
-    <section className="Exhibitions" id="exhibitions">
+    <section className="Exhibitions">
       <h2>Popular exhibitions</h2>
       <div className="cards">
         <article
@@ -24,7 +24,7 @@ const Exhibitions = () => {
           className={velazquezInView ? "fade-in" : ""}
         >
           <div className="text-container">
-            <h3>Diego Velazquez</h3>
+            <h3>Velázquez</h3>
             <button>Visit</button>
           </div>
           <img

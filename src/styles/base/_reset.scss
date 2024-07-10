@@ -68,6 +68,10 @@ li {
 button {
   padding: 0.4rem;
   border-radius: 5px;
+  &.action-btn {
+    background-color: $action;
+    border: 1px solid $action;
+  }
 }
 
 .sr-only {
@@ -75,7 +79,6 @@ button {
 }
 
 p {
-  max-width: 600px;
   margin-top: 1rem;
 }
 
@@ -84,7 +87,9 @@ strong {
 }
 
 button {
-  padding: 10px 20px;
+  padding: 5px 20px;
+
+  margin-top: 1rem;
 
   font-size: 1rem;
   font-family: "Red Hat Display", sans-serif;

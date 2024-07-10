@@ -1,4 +1,6 @@
 import React from "react";
+import PageHeader from "../components/PageHeader";
+import headerImg from "../img/Garden.webp";
 import img1 from "../img/tickets-individual-visit.jpg";
 import img2 from "../img/tickets-group.webp";
 import img3 from "../img/tickets-paris-museum-pass.jpg";
@@ -9,9 +11,8 @@ import img6 from "../img/tickets-guided-group.jpg";
 const Tickets = () => {
   return (
     <main className="Tickets">
-      <div className="tickets-header">
-        <h1>Buy tickets</h1>
-      </div>
+      <PageHeader title="Tickets" backgroundImage={headerImg} />
+
       <section className="tickets-body">
         <h2>Choose your ticket</h2>
         <p>
@@ -28,7 +29,7 @@ const Tickets = () => {
             </p>
             <img src={img1} alt="" />
             <div>
-              <button>Buy</button>
+              <button className="action-btn">Buy</button>
               <button>Read more</button>
             </div>
           </article>
@@ -41,7 +42,7 @@ const Tickets = () => {
             </p>
             <img src={img2} alt="" />
             <div>
-              <button>Buy</button>
+              <button className="action-btn">Buy</button>
               <button>Read more</button>
             </div>
           </article>
@@ -54,7 +55,7 @@ const Tickets = () => {
             </p>
             <img src={img3} alt="" />
             <div>
-              <button>Buy</button>
+              <button className="action-btn">Buy</button>
               <button>Read more</button>
             </div>
           </article>
@@ -67,7 +68,7 @@ const Tickets = () => {
             </p>
             <img src={img4} alt="" />
             <div>
-              <button>Buy</button>
+              <button className="action-btn">Buy</button>
               <button>Read more</button>
             </div>
           </article>
@@ -80,7 +81,7 @@ const Tickets = () => {
             </p>
             <img src={img5} alt="" />
             <div>
-              <button>Buy</button>
+              <button className="action-btn">Buy</button>
               <button>Read more</button>
             </div>
           </article>
@@ -93,7 +94,7 @@ const Tickets = () => {
             </p>
             <img src={img6} alt="" />
             <div>
-              <button>Buy</button>
+              <button className="action-btn">Buy</button>
               <button>Read more</button>
             </div>
           </article>

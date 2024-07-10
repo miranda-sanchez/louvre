@@ -1,0 +1,50 @@
+@use "../base/mixins" as *;
+@use "../base/colors" as *;
+
+.exhibitions-menu {
+    @include flexbox(flex, left, center);
+    margin: 2rem;
+    li {
+        margin-right: 1.5rem;
+        cursor: pointer;
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: rgba($light, 0.5);
+            position: absolute;
+            bottom: -5px; 
+            left: 0;
+            transition: width 0.3s ease;
+          }
+        
+          &.active::after {
+            width: 100%;
+          }
+    }
+}
+
+.section-exhibitions {
+    margin: 2rem;
+    @include flexbox(flex, center, center);
+    overflow: hidden;
+
+    .exhibition-item {
+        width: 80%;
+        transition: transform 0.5s ease;
+        text-align: center;
+        p {
+            text-align: center;
+
+        }
+        button:first-of-type{
+            margin-right: 1rem;
+        }
+
+    }
+
+
+}

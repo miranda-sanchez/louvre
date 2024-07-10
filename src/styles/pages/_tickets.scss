@@ -2,20 +2,7 @@
 @use "../base/colors" as *;
 
 .Tickets {
-    .tickets-header{
-        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url("img/Garden.webp");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: top;
-        background-attachment: fixed;
-        padding: 7rem 2rem;
-        
-        h1 {
-            padding-bottom: 40vh;
-        }
 
-    }
-    
         .tickets-body {
             background-color: rgba($bg, 0.8);
             border-radius: 20px;
@@ -48,15 +35,11 @@
                         display: none;
                     }
                     
-                    button {
-                        margin-top: 1rem;
-                        &:first-of-type{
-                            margin-right: 1rem;
-                            background-color: $action;
-                            border: 1px solid $action;
 
-                        }
+                    button:first-of-type{
+                        margin-right: 1rem;
                     }
+
                 }
             }
         }

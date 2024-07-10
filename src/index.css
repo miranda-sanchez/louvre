@@ -169,7 +169,6 @@ nav .primary-navigation .tickets:hover {
   align-items: center;
 }
 .Exhibitions .cards article .text-container h3 {
-  margin-left: 1rem;
   float: left;
 }
 .Exhibitions .cards article img {
@@ -193,7 +192,7 @@ nav .primary-navigation .tickets:hover {
     height: 300px;
   }
 }
-.Visit {
+.Salle {
   height: 100vh;
   background-image: url("img/LovreInside.webp");
   background-attachment: fixed;
@@ -202,7 +201,7 @@ nav .primary-navigation .tickets:hover {
   justify-content: center;
   align-items: center;
 }
-.Visit div {
+.Salle div {
   background-color: rgba(229, 229, 229, 0.95);
   color: #272727;
   font-family: "Playfair Display", serif;
@@ -268,6 +267,16 @@ nav .primary-navigation .tickets:hover {
 }
 .Collection button {
   margin: 0 auto;
+}
+
+.Page .page-header {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  padding: 7rem 2rem;
+}
+.Page .page-header h1 {
+  padding-bottom: 40vh;
 }
 
 footer {
@@ -439,13 +448,16 @@ button {
   padding: 0.4rem;
   border-radius: 5px;
 }
+button.action-btn {
+  background-color: #016659;
+  border: 1px solid #016659;
+}
 
 .sr-only {
   display: none;
 }
 
 p {
-  max-width: 600px;
   margin-top: 1rem;
 }
 
@@ -454,7 +466,8 @@ strong {
 }
 
 button {
-  padding: 10px 20px;
+  padding: 5px 20px;
+  margin-top: 1rem;
   font-size: 1rem;
   font-family: "Red Hat Display", sans-serif;
   cursor: pointer;
@@ -473,17 +486,6 @@ button:hover {
     font-size: 18px;
     line-height: 1.6;
   }
-}
-.Tickets .tickets-header {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url("img/Garden.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
-  background-attachment: fixed;
-  padding: 7rem 2rem;
-}
-.Tickets .tickets-header h1 {
-  padding-bottom: 40vh;
 }
 .Tickets .tickets-body {
   background-color: rgba(39, 39, 39, 0.8);
@@ -515,13 +517,8 @@ button:hover {
 .Tickets .tickets-body .tickets-options article img {
   display: none;
 }
-.Tickets .tickets-body .tickets-options article button {
-  margin-top: 1rem;
-}
 .Tickets .tickets-body .tickets-options article button:first-of-type {
   margin-right: 1rem;
-  background-color: #016659;
-  border: 1px solid #016659;
 }
 .Tickets .tickets-prices {
   margin: 2rem;
@@ -565,6 +562,50 @@ button:hover {
   .Tickets .tickets-body .tickets-options article img {
     height: 400px;
   }
+}
+.exhibitions-menu {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 2rem;
+}
+.exhibitions-menu li {
+  margin-right: 1.5rem;
+  cursor: pointer;
+  position: relative;
+}
+.exhibitions-menu li::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: rgba(229, 229, 229, 0.5);
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+.exhibitions-menu li.active::after {
+  width: 100%;
+}
+
+.section-exhibitions {
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.section-exhibitions .exhibition-item {
+  width: 80%;
+  transition: transform 0.5s ease;
+  text-align: center;
+}
+.section-exhibitions .exhibition-item p {
+  text-align: center;
+}
+.section-exhibitions .exhibition-item button:first-of-type {
+  margin-right: 1rem;
 }
 
 /*# sourceMappingURL=index.css.map */
