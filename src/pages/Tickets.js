@@ -1,4 +1,10 @@
 import React from "react";
+import img1 from "../img/tickets-individual-visit.jpg";
+import img2 from "../img/tickets-group.webp";
+import img3 from "../img/tickets-paris-museum-pass.jpg";
+import img4 from "../img/tickets-audio-tour.jpg";
+import img5 from "../img/tickets-guided-tour.jpg";
+import img6 from "../img/tickets-guided-group.jpg";
 
 const Tickets = () => {
   return (
@@ -17,49 +23,79 @@ const Tickets = () => {
           <article>
             <h3>Individual Tickets</h3>
             <p>
-              Ticket and time slot booking granting access to the permanent
-              collections and the temporary exhibitions.
+              Purchase a single ticket for individual access to all permanent
+              and temporary exhibits at the Louvre.
             </p>
-            <button>Buy</button>
-            <button>Read more</button>
+            <img src={img1} alt="" />
+            <div>
+              <button>Buy</button>
+              <button>Read more</button>
+            </div>
           </article>
 
           <article>
             <h3>Group Tickets</h3>
             <p>
-              Ticket and time slot booking granting access to the permanent
-              collections and the temporary exhibitions.
+              Reserve your time slot to enjoy seamless entry with your Paris
+              Museum Pass.
             </p>
-            <button>Buy</button>
-            <button>Read more</button>
+            <img src={img2} alt="" />
+            <div>
+              <button>Buy</button>
+              <button>Read more</button>
+            </div>
           </article>
 
           <article>
-            <h3>Paris Museum Pass holders</h3>
-            <p>Compulsory time slot booking</p>
-            <button>Buy</button>
-            <button>Read more</button>
+            <h3>Paris Museum Pass</h3>
+            <p>
+              Reserve your time slot to enjoy seamless entry with your Paris
+              Museum Pass.
+            </p>
+            <img src={img3} alt="" />
+            <div>
+              <button>Buy</button>
+              <button>Read more</button>
+            </div>
           </article>
 
           <article>
-            <h3>Audio Guide booking</h3>
-            <p>Permanent collections of the Musée du Louvre</p>
-            <button>Buy</button>
-            <button>Read more</button>
+            <h3>Audio Guide Tours</h3>
+            <p>
+              Enhance your visit with an audio guide offering detailed insights
+              into the Louvre.
+            </p>
+            <img src={img4} alt="" />
+            <div>
+              <button>Buy</button>
+              <button>Read more</button>
+            </div>
           </article>
 
           <article>
             <h3>Guided Tours</h3>
-            <p>Cultural activities with speaker or museum guide.</p>
-            <button>Buy</button>
-            <button>Read more</button>
+            <p>
+              Join a guided tour to explore the museum with expert commentary
+              and insights.
+            </p>
+            <img src={img5} alt="" />
+            <div>
+              <button>Buy</button>
+              <button>Read more</button>
+            </div>
           </article>
 
           <article>
-            <h3>Group tickets for the Museum</h3>
-            <p>Groups with their own guide.</p>
-            <button>Buy</button>
-            <button>Read more</button>
+            <h3>Group Tickets</h3>
+            <p>
+              Groups with their own guide can secure tickets for a tailored
+              museum experience.
+            </p>
+            <img src={img6} alt="" />
+            <div>
+              <button>Buy</button>
+              <button>Read more</button>
+            </div>
           </article>
         </div>
       </section>
