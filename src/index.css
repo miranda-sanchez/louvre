@@ -590,6 +590,25 @@ button:hover {
   width: 100%;
 }
 
+.section-exhibitions .exhibition-item {
+  margin: 0 auto;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(229, 229, 229, 0.5);
+}
+.section-exhibitions .exhibition-item .exhibition-text {
+  margin: 0 2rem;
+}
+.section-exhibitions .exhibition-item .exhibition-text h2 {
+  text-align: left;
+}
+.section-exhibitions .exhibition-item img {
+  width: 100%;
+}
+.section-exhibitions .exhibition-item:last-of-type {
+  border-bottom: none;
+}
+
 .section-guidedtours {
   margin: 2rem;
   display: flex;
@@ -607,6 +626,23 @@ button:hover {
 }
 .section-guidedtours .guidedtours-item button:first-of-type {
   margin-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .section-exhibitions .exhibition-item {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+    max-width: 1200px;
+  }
+  .section-exhibitions .exhibition-item img {
+    margin-right: 20px;
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    float: left;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

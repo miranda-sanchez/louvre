@@ -3,12 +3,14 @@ import PageHeader from "../components/PageHeader";
 import headerImg from "../img/outside.jpg";
 import { useSwipeable } from "react-swipeable";
 import { MdArrowBack, MdArrowForward } from "react-icons/md";
+import olympism from "../img/olympism.webp";
+import torloniaCollection from "../img/torlonia-collection.jpg";
 
 const Exhibitions = () => {
   //Menu
   const [activeSection, setActiveSection] = useState("exhibitions");
 
-  //Carrousel
+  //Carrousel for Guided Tours
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const guidedTours = [
@@ -39,6 +41,25 @@ const Exhibitions = () => {
     onSwipedRight: prevItem,
   });
 
+  // Exhibitions items
+  const exhibitions = [
+    {
+      imgSrc: olympism,
+      imgAlt: "A Greek vessel of the Marquis Campana",
+      title: "Olympism",
+      description: "Modern Invention, Ancient Legacy",
+      date: "24 April to 16 September 2024",
+    },
+    {
+      imgSrc: torloniaCollection,
+      imgAlt: "A sculpture from the Torlonia collection",
+      title: "Masterpieces from the Torlonia Collection",
+      description:
+        "The largest ever private collection of ancient Roman sculptures",
+      date: "26 June to 11 November 2024",
+    },
+  ];
+
   return (
     <main>
       <PageHeader title="Exhibitions" backgroundImage={headerImg} />
@@ -59,7 +80,18 @@ const Exhibitions = () => {
       </ul>
 
       {activeSection === "exhibitions" && (
-        <section className="section-exhibitions"></section>
+        <section className="section-exhibitions">
+          {exhibitions.map((exhibition, index) => (
+            <article key={index} className="exhibition-item">
+              <img src={exhibition.imgSrc} alt={exhibition.imgAlt} />
+              <div className="exhibition-text">
+                <h2>{exhibition.title}</h2>
+                <p>{exhibition.description}</p>
+                <p>{exhibition.date}</p>
+              </div>
+            </article>
+          ))}
+        </section>
       )}
 
       {activeSection === "guidedTours" && (

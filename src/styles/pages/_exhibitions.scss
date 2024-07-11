@@ -27,6 +27,28 @@
     }
 }
 
+.section-exhibitions {
+    .exhibition-item {
+        margin: 0 auto;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid rgba($light, 0.5);
+        .exhibition-text {
+            margin: 0 2rem;
+            h2 {
+                text-align: left;
+            }
+        }
+        img {
+            width: 100%;
+        }
+        &:last-of-type {
+            border-bottom: none;
+        }
+    }
+    
+}
+
 .section-guidedtours {
     margin: 2rem;
     @include flexbox(flex, center, center);
@@ -47,4 +69,22 @@
     }
 
 
+}
+
+@media (min-width: 768px) { 
+    .section-exhibitions {
+        .exhibition-item {
+            @include flexbox(grid, center, center);
+            grid-template-columns: auto 1fr;
+            max-width: 1200px;
+            img {
+                margin-right: 20px;
+                width: 500px;
+                height: 300px;
+                object-fit: cover;
+                float: left;
+            }
+            
+        }
+    }
 }
