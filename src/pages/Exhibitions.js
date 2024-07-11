@@ -11,7 +11,7 @@ const Exhibitions = () => {
   //Carrousel
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const exhibitions = [
+  const guidedTours = [
     {
       title: "Olympism",
       description: "Modern Invention, Ancient Legacy",
@@ -25,12 +25,12 @@ const Exhibitions = () => {
   ];
 
   const nextItem = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % exhibitions.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % guidedTours.length);
   };
 
   const prevItem = () => {
     setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + exhibitions.length) % exhibitions.length
+      (prevIndex) => (prevIndex - 1 + guidedTours.length) % guidedTours.length
     );
   };
 
@@ -59,14 +59,18 @@ const Exhibitions = () => {
       </ul>
 
       {activeSection === "exhibitions" && (
-        <section className="section-exhibitions" {...handlers}>
+        <section className="section-exhibitions"></section>
+      )}
+
+      {activeSection === "guidedTours" && (
+        <section className="section-guidedtours" {...handlers}>
           <button className="arrow left-arrow" onClick={prevItem}>
             <MdArrowBack />
           </button>
-          <article className="exhibition-item">
-            <h2>{exhibitions[currentIndex].title}</h2>
-            <p>{exhibitions[currentIndex].description}</p>
-            <span>{exhibitions[currentIndex].date}</span>
+          <article className="guidedtours-item">
+            <h2>{guidedTours[currentIndex].title}</h2>
+            <p>{guidedTours[currentIndex].description}</p>
+            <span>{guidedTours[currentIndex].date}</span>
             <div>
               <button className="action-btn">Buy</button>
               <button>Read more</button>
@@ -75,21 +79,6 @@ const Exhibitions = () => {
           <button className="arrow right-arrow" onClick={nextItem}>
             <MdArrowForward />
           </button>
-        </section>
-      )}
-      {activeSection === "guidedTours" && (
-        <section className="section-guidedtours">
-          <h2>Guided Tours Section</h2>
-          <p>This is the content for the guided tours section.</p>
-          <div className="tour-item">
-            <h3>Tour 1</h3>
-            <p>Description of Tour 1...</p>
-          </div>
-          <div className="tour-item">
-            <h3>Tour 2</h3>
-            <p>Description of Tour 2...</p>
-          </div>
-          {/* Add more content as needed */}
         </section>
       )}
     </main>

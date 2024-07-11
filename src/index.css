@@ -497,6 +497,7 @@ button:hover {
 }
 .Tickets .tickets-body p {
   margin: 0 auto;
+  max-width: 600px;
 }
 .Tickets .tickets-body .tickets-options {
   display: grid;
@@ -589,22 +590,22 @@ button:hover {
   width: 100%;
 }
 
-.section-exhibitions {
+.section-guidedtours {
   margin: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 }
-.section-exhibitions .exhibition-item {
+.section-guidedtours .guidedtours-item {
   width: 80%;
   transition: transform 0.5s ease;
   text-align: center;
 }
-.section-exhibitions .exhibition-item p {
+.section-guidedtours .guidedtours-item p {
   text-align: center;
 }
-.section-exhibitions .exhibition-item button:first-of-type {
+.section-guidedtours .guidedtours-item button:first-of-type {
   margin-right: 1rem;
 }
 

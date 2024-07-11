@@ -27,12 +27,12 @@
     }
 }
 
-.section-exhibitions {
+.section-guidedtours {
     margin: 2rem;
     @include flexbox(flex, center, center);
     overflow: hidden;
 
-    .exhibition-item {
+    .guidedtours-item {
         width: 80%;
         transition: transform 0.5s ease;
         text-align: center;

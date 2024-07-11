@@ -8,6 +8,45 @@ import img4 from "../img/tickets-audio-tour.jpg";
 import img5 from "../img/tickets-guided-tour.jpg";
 import img6 from "../img/tickets-guided-group.jpg";
 
+const ticketOptions = [
+  {
+    title: "Individual Tickets",
+    description:
+      "Purchase a single ticket for individual access to all permanent and temporary exhibits at the Louvre.",
+    imgSrc: img1,
+  },
+  {
+    title: "Group Tickets",
+    description:
+      "Groups with their own guide can secure tickets for a tailored museum experience.",
+    imgSrc: img2,
+  },
+  {
+    title: "Paris Museum Pass",
+    description:
+      "Reserve your time slot to enjoy seamless entry with your Paris Museum Pass.",
+    imgSrc: img3,
+  },
+  {
+    title: "Audio Guide Tours",
+    description:
+      "Enhance your visit with an audio guide offering detailed insights into the Louvre.",
+    imgSrc: img4,
+  },
+  {
+    title: "Guided Tours",
+    description:
+      "Join a guided tour to explore the museum with expert commentary and insights.",
+    imgSrc: img5,
+  },
+  {
+    title: "Group Tickets",
+    description:
+      "Groups with their own guide can secure tickets for a tailored museum experience.",
+    imgSrc: img6,
+  },
+];
+
 const Tickets = () => {
   return (
     <main className="Tickets">
@@ -21,83 +60,17 @@ const Tickets = () => {
           Museum the same day and the day after your visit of the Louvre museum.
         </p>
         <div className="tickets-options">
-          <article>
-            <h3>Individual Tickets</h3>
-            <p>
-              Purchase a single ticket for individual access to all permanent
-              and temporary exhibits at the Louvre.
-            </p>
-            <img src={img1} alt="" />
-            <div>
-              <button className="action-btn">Buy</button>
-              <button>Read more</button>
-            </div>
-          </article>
-
-          <article>
-            <h3>Group Tickets</h3>
-            <p>
-              Reserve your time slot to enjoy seamless entry with your Paris
-              Museum Pass.
-            </p>
-            <img src={img2} alt="" />
-            <div>
-              <button className="action-btn">Buy</button>
-              <button>Read more</button>
-            </div>
-          </article>
-
-          <article>
-            <h3>Paris Museum Pass</h3>
-            <p>
-              Reserve your time slot to enjoy seamless entry with your Paris
-              Museum Pass.
-            </p>
-            <img src={img3} alt="" />
-            <div>
-              <button className="action-btn">Buy</button>
-              <button>Read more</button>
-            </div>
-          </article>
-
-          <article>
-            <h3>Audio Guide Tours</h3>
-            <p>
-              Enhance your visit with an audio guide offering detailed insights
-              into the Louvre.
-            </p>
-            <img src={img4} alt="" />
-            <div>
-              <button className="action-btn">Buy</button>
-              <button>Read more</button>
-            </div>
-          </article>
-
-          <article>
-            <h3>Guided Tours</h3>
-            <p>
-              Join a guided tour to explore the museum with expert commentary
-              and insights.
-            </p>
-            <img src={img5} alt="" />
-            <div>
-              <button className="action-btn">Buy</button>
-              <button>Read more</button>
-            </div>
-          </article>
-
-          <article>
-            <h3>Group Tickets</h3>
-            <p>
-              Groups with their own guide can secure tickets for a tailored
-              museum experience.
-            </p>
-            <img src={img6} alt="" />
-            <div>
-              <button className="action-btn">Buy</button>
-              <button>Read more</button>
-            </div>
-          </article>
+          {ticketOptions.map((option, index) => (
+            <article key={index}>
+              <h3>{option.title}</h3>
+              <p>{option.description}</p>
+              <img src={option.imgSrc} alt={option.title} />
+              <div>
+                <button className="action-btn">Buy now</button>
+                <button>Read more</button>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
     </main>
