@@ -49,7 +49,6 @@ p {
   font-size: 1em;
   line-height: 1.6;
   padding-top: 0.2em 0;
-  text-align: justify;
 }
 
 a, a:active, a:visited, a:hover{
@@ -66,7 +65,6 @@ li {
 }
 
 button {
-  padding: 0.4rem;
   border-radius: 5px;
   &.action-btn {
     background-color: $action;

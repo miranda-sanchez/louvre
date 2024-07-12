@@ -5,41 +5,12 @@ import { useSwipeable } from "react-swipeable";
 import { MdArrowBack, MdArrowForward } from "react-icons/md";
 import olympism from "../img/olympism.webp";
 import torloniaCollection from "../img/torlonia-collection.jpg";
+import guidedTour1 from "../img/img5.jpg";
+import guidedTour2 from "../img/Garden.webp";
 
 const Exhibitions = () => {
   //Menu
   const [activeSection, setActiveSection] = useState("exhibitions");
-
-  //Carrousel for Guided Tours
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const guidedTours = [
-    {
-      title: "Olympism",
-      description: "Modern Invention, Ancient Legacy",
-      date: "24 April to September 2024",
-    },
-    {
-      title: "Masterpieces from the Torlonia Collection",
-      description: "",
-      date: "26 June to 11 November 2024",
-    },
-  ];
-
-  const nextItem = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % guidedTours.length);
-  };
-
-  const prevItem = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + guidedTours.length) % guidedTours.length
-    );
-  };
-
-  const handlers = useSwipeable({
-    onSwipedLeft: nextItem,
-    onSwipedRight: prevItem,
-  });
 
   // Exhibitions items
   const exhibitions = [
@@ -59,6 +30,53 @@ const Exhibitions = () => {
       date: "26 June to 11 November 2024",
     },
   ];
+
+  //Carrousel for Guided Tours
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const guidedTours = [
+    {
+      imgSrc: guidedTour1,
+      month: "July 2024",
+      title: "Welcome to the Louvre",
+      description:
+        "This guided tour will make you discover the must-see artworks at the Louvre",
+      days: "Monday to Saturday",
+      hours: "9.45am to 2pm",
+    },
+    {
+      imgSrc: guidedTour2,
+      month: "July 2024",
+      title: "The Gardens",
+      description: "Explore the delightful gardens of the Louvre.",
+      days: "Monday to Friday",
+      hours: "8am to 10pm",
+    },
+    {
+      imgSrc: guidedTour1,
+      month: "August 2024",
+      title: "Welcome to the Louvre",
+      description:
+        "This guided tour will make you discover the must-see artworks at the Louvre",
+      days: "Monday to Saturday",
+      hours: "9.45am to 2pm",
+    },
+  ];
+
+  const nextItem = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % guidedTours.length);
+  };
+
+  const prevItem = () => {
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + guidedTours.length) % guidedTours.length
+    );
+  };
+
+  const handlers = useSwipeable({
+    onSwipedLeft: nextItem,
+    onSwipedRight: prevItem,
+  });
 
   return (
     <main>
@@ -100,9 +118,16 @@ const Exhibitions = () => {
             <MdArrowBack />
           </button>
           <article className="guidedtours-item">
+            <img src={guidedTours[currentIndex].imgSrc} alt="" />
+            <span className="guidedtours-month">
+              {guidedTours[currentIndex].month}
+            </span>
             <h2>{guidedTours[currentIndex].title}</h2>
             <p>{guidedTours[currentIndex].description}</p>
-            <span>{guidedTours[currentIndex].date}</span>
+            <div className="guidedtours-dayshours">
+              <span>{guidedTours[currentIndex].days}</span>
+              <span>{guidedTours[currentIndex].hours}</span>
+            </div>
             <div>
               <button className="action-btn">Buy</button>
               <button>Read more</button>

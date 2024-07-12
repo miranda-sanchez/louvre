@@ -429,7 +429,6 @@ p {
   font-size: 1em;
   line-height: 1.6;
   padding-top: 0.2em 0;
-  text-align: justify;
 }
 
 a, a:active, a:visited, a:hover {
@@ -446,7 +445,6 @@ li {
 }
 
 button {
-  padding: 0.4rem;
   border-radius: 5px;
 }
 button.action-btn {
@@ -572,7 +570,7 @@ button:hover {
   display: flex;
   justify-content: left;
   align-items: center;
-  margin: 2rem;
+  margin: 20px;
 }
 .exhibitions-menu li {
   margin-right: 1.5rem;
@@ -596,12 +594,12 @@ button:hover {
 
 .section-exhibitions .exhibition-item {
   margin: 0 auto;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   margin-bottom: 40px;
   border-bottom: 1px solid rgba(229, 229, 229, 0.5);
 }
 .section-exhibitions .exhibition-item .exhibition-text {
-  margin: 0 2rem;
+  margin: 10px 20px 0 20px;
 }
 .section-exhibitions .exhibition-item .exhibition-text h2 {
   text-align: left;
@@ -614,22 +612,51 @@ button:hover {
 }
 
 .section-guidedtours {
-  margin: 2rem;
+  margin: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 }
 .section-guidedtours .guidedtours-item {
-  width: 80%;
   transition: transform 0.5s ease;
   text-align: center;
+  position: relative;
+}
+.section-guidedtours .guidedtours-item .guidedtours-month {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  background-color: rgba(58, 68, 84, 0.95);
+  padding: 10px 60px 10px 10px;
+  border-radius: 15px 0 0 0;
+}
+.section-guidedtours .guidedtours-item h2 {
+  margin-top: 10px;
+}
+.section-guidedtours .guidedtours-item img {
+  height: 300px;
+  width: 90%;
+  object-fit: cover;
+  object-position: top;
 }
 .section-guidedtours .guidedtours-item p {
   text-align: center;
 }
+.section-guidedtours .guidedtours-item .guidedtours-dayshours {
+  color: rgba(229, 229, 229, 0.5);
+}
+.section-guidedtours .guidedtours-item .guidedtours-dayshours span:first-of-type {
+  margin-right: 10px;
+}
 .section-guidedtours .guidedtours-item button:first-of-type {
   margin-right: 1rem;
+}
+.section-guidedtours .arrow {
+  text-align: center;
+  padding: 5px 10px;
+  border: 1px solid rgba(229, 229, 229, 0.5);
+  border-radius: 50%;
 }
 
 @media (min-width: 768px) {
@@ -637,15 +664,24 @@ button:hover {
     display: grid;
     justify-content: center;
     align-items: center;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr auto;
     max-width: 1200px;
+    padding-bottom: 40px;
   }
   .section-exhibitions .exhibition-item img {
-    margin-right: 20px;
+    margin-right: 10px;
     width: 500px;
     height: 300px;
     object-fit: cover;
     float: left;
+  }
+  .section-guidedtours .guidedtours-item {
+    width: 100%;
+    max-width: 1200px;
+  }
+  .section-guidedtours .guidedtours-item img {
+    height: 500px;
+    object-position: bottom;
   }
 }
 
