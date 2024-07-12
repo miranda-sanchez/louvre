@@ -61,6 +61,8 @@ nav .primary-navigation .tickets:hover {
     color: #E5E5E5;
     width: 2rem;
     aspect-ratio: 1;
+    padding: 0;
+    margin: 0;
     right: 2rem;
     z-index: 999999;
     border: none;
