@@ -71,6 +71,9 @@ button {
   &.action-btn {
     background-color: $action;
     border: 1px solid $action;
+    &:hover {
+      background-color: rgba($action, 0.5);
+    }
   }
 }
 

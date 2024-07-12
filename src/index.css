@@ -304,6 +304,7 @@ footer .faq .accordion-container {
   width: 100%;
 }
 footer .faq .accordion-container .accordion-item {
+  background-color: #E5E5E5;
   border: none;
   border-top: 1px solid #272727;
   border-radius: 0;
@@ -451,6 +452,9 @@ button {
 button.action-btn {
   background-color: #016659;
   border: 1px solid #016659;
+}
+button.action-btn:hover {
+  background-color: rgba(1, 102, 89, 0.5);
 }
 
 .sr-only {

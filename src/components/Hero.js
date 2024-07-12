@@ -10,7 +10,7 @@ const Hero = () => {
           Welcome to the <strong>Louvre</strong>
         </h1>
         <button>
-          Our galery <MdNorthEast />
+          Exhibitions <MdNorthEast />
         </button>
       </div>
       <figure>
