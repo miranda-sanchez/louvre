@@ -12,7 +12,7 @@ const Nav = () => {
 
   return (
     <nav>
-      <Link to="/">
+      <Link exact to="/">
         <img id="logo" src={logo} alt="Louvre Museum logo" />
       </Link>
       <button

@@ -446,17 +446,6 @@ li {
   list-style-type: none;
 }
 
-button {
-  border-radius: 5px;
-}
-button.action-btn {
-  background-color: #016659;
-  border: 1px solid #016659;
-}
-button.action-btn:hover {
-  background-color: rgba(1, 102, 89, 0.5);
-}
-
 .sr-only {
   display: none;
 }
@@ -472,17 +461,25 @@ strong {
 button {
   padding: 5px 20px;
   margin-top: 1rem;
+  border-radius: 5px;
   font-size: 1rem;
   font-family: "Red Hat Display", sans-serif;
   cursor: pointer;
-  background-color: rgba(58, 68, 84, 0.7);
+  background-color: rgba(58, 68, 84, 0.9);
   color: #E5E5E5;
-  border: 1px solid #E5E5E5;
+  border: 1px solid rgba(229, 229, 229, 0.5);
   border-radius: 20px;
   letter-spacing: 0.05rem;
 }
 button:hover {
-  background-color: rgba(58, 68, 84, 0.9);
+  background-color: rgba(58, 68, 84, 0.7);
+}
+button.action-btn {
+  background-color: #016659;
+  border: 1px solid #016659;
+}
+button.action-btn:hover {
+  background-color: rgba(1, 102, 89, 0.7);
 }
 
 @media (min-width: 768px) {
@@ -573,6 +570,7 @@ button:hover {
   justify-content: left;
   align-items: center;
   margin: 20px;
+  margin-bottom: 30px;
 }
 .exhibitions-menu li {
   margin-right: 1.5rem;

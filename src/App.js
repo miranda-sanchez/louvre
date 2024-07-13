@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route index exact path="/" element={<Home />}></Route>
+        <Route index exact="true" path="/" element={<Home />}></Route>
         <Route path="/visit" element={<Visit />}></Route>
         <Route path="/Exhibitions" element={<Exhibitions />}></Route>
         <Route path="/tickets" element={<Tickets />}></Route>
