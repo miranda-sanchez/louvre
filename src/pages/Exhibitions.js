@@ -1,40 +1,21 @@
 import React, { useState } from "react";
+import { Link, Route, Routes, useLocation } from "react-router-dom";
+import ExhibitionsSection from "../components/ExhibitionsSection";
 import PageHeader from "../components/PageHeader";
 import headerImg from "../img/outside.jpg";
 import GuidedToursSection from "../components/GuidedToursSection";
-import ReadMoreSection from "../components/ReadMoreSection";
-import olympism from "../img/olympism.webp";
-import torloniaCollection from "../img/torlonia-collection.jpg";
+import GuidedToursInfo from "../components/GuidedToursInfo";
 
 const Exhibitions = () => {
-  const [activeSection, setActiveSection] = useState("exhibitions");
   const [selectedTour, setSelectedTour] = useState(null);
-
-  const exhibitions = [
-    {
-      imgSrc: olympism,
-      imgAlt: "A Greek vessel of the Marquis Campana",
-      title: "Olympism",
-      description: "Modern Invention, Ancient Legacy",
-      date: "24 April to 16 September 2024",
-    },
-    {
-      imgSrc: torloniaCollection,
-      imgAlt: "A sculpture from the Torlonia collection",
-      title: "Masterpieces from the Torlonia Collection",
-      description:
-        "The largest ever private collection of ancient Roman sculptures",
-      date: "26 June to 11 November 2024",
-    },
-  ];
+  const location = useLocation();
 
   const handleReadMore = (tour) => {
     setSelectedTour(tour);
-    setActiveSection("readMore");
   };
 
   const handleGoBack = () => {
-    setActiveSection("guidedTours");
+    setSelectedTour(null);
   };
 
   return (
@@ -42,42 +23,31 @@ const Exhibitions = () => {
       <PageHeader title="Exhibitions" backgroundImage={headerImg} />
 
       <ul className="exhibitions-menu">
-        <li
-          className={activeSection === "exhibitions" ? "active" : ""}
-          onClick={() => setActiveSection("exhibitions")}
-        >
-          Exhibitions
+        <li className={location.pathname === "/exhibitions" ? "active" : ""}>
+          <Link to="/exhibitions">Exhibitions</Link>
         </li>
         <li
-          className={activeSection === "guidedTours" ? "active" : ""}
-          onClick={() => setActiveSection("guidedTours")}
+          className={
+            location.pathname === "/exhibitions/guided-tours" ? "active" : ""
+          }
         >
-          Guided Tours
+          <Link to="/exhibitions/guided-tours">Guided Tours</Link>
         </li>
       </ul>
 
-      {activeSection === "exhibitions" && (
-        <section className="section-exhibitions">
-          {exhibitions.map((exhibition, index) => (
-            <article key={index} className="exhibition-item">
-              <img src={exhibition.imgSrc} alt={exhibition.imgAlt} />
-              <div className="exhibition-text">
-                <h2>{exhibition.title}</h2>
-                <p>{exhibition.description}</p>
-                <p>{exhibition.date}</p>
-              </div>
-            </article>
-          ))}
-        </section>
-      )}
-
-      {activeSection === "guidedTours" && (
-        <GuidedToursSection onReadMore={handleReadMore} />
-      )}
-
-      {activeSection === "readMore" && selectedTour && (
-        <ReadMoreSection tour={selectedTour} onGoBack={handleGoBack} />
-      )}
+      <Routes>
+        <Route index element={<ExhibitionsSection />} />
+        <Route
+          path="guided-tours"
+          element={
+            selectedTour ? (
+              <GuidedToursInfo tour={selectedTour} onGoBack={handleGoBack} />
+            ) : (
+              <GuidedToursSection onReadMore={handleReadMore} />
+            )
+          }
+        />
+      </Routes>
     </main>
   );
 };

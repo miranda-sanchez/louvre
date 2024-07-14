@@ -99,13 +99,18 @@
         border: 1px solid rgba($light, 0.5);
         border-radius: 50%;
     }
+
+}
+
+.section-guidedtoursinfo {
+    margin: 20px;
 }
 
 @media (min-width: 768px) { 
     .section-exhibitions {
         .exhibition-item {
             @include flexbox(grid, center, center);
-            grid-template-columns: 1fr auto;
+            grid-template-columns:auto 1fr ;
             max-width: 1200px;
             padding-bottom: 40px;
             img {

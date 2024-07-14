@@ -659,12 +659,16 @@ button.action-btn:hover {
   border-radius: 50%;
 }
 
+.section-guidedtoursinfo {
+  margin: 20px;
+}
+
 @media (min-width: 768px) {
   .section-exhibitions .exhibition-item {
     display: grid;
     justify-content: center;
     align-items: center;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: auto 1fr;
     max-width: 1200px;
     padding-bottom: 40px;
   }
