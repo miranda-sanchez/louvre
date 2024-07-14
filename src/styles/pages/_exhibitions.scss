@@ -68,7 +68,6 @@
             border-radius: 15px 0 0 0;
         }
         
-
         h2 {
             margin-top: 10px;
         }
@@ -104,6 +103,43 @@
 
 .section-guidedtoursinfo {
     margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    img {
+        height: 400px;
+        width: 80%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+    }
+
+    table {
+        width: 90%;
+        max-width: 800px;
+        margin: 0 auto;
+        th, td {
+            padding: 1rem;
+        }
+        tr {
+        border: 1px solid rgba($light, 0.2);
+        }
+        .btn-row {
+            text-align: center;
+            td {
+                padding: 0;
+                text-align: center;
+                &:last-child {
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+
+    p {
+        max-width: 800px;
+    }
 }
 
 @media (min-width: 768px) { 

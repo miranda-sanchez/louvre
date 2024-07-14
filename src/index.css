@@ -661,6 +661,39 @@ button.action-btn:hover {
 
 .section-guidedtoursinfo {
   margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-guidedtoursinfo img {
+  height: 400px;
+  width: 80%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.section-guidedtoursinfo table {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.section-guidedtoursinfo table th, .section-guidedtoursinfo table td {
+  padding: 1rem;
+}
+.section-guidedtoursinfo table tr {
+  border: 1px solid rgba(229, 229, 229, 0.2);
+}
+.section-guidedtoursinfo table .btn-row {
+  text-align: center;
+}
+.section-guidedtoursinfo table .btn-row td {
+  padding: 0;
+  text-align: center;
+}
+.section-guidedtoursinfo table .btn-row td:last-child {
+  padding: 1rem;
+}
+.section-guidedtoursinfo p {
+  max-width: 800px;
 }
 
 @media (min-width: 768px) {
