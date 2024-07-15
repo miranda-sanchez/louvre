@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
 .Header {
   max-width: 1800px;
   padding: 2rem;
@@ -141,28 +142,28 @@ nav .primary-navigation .tickets:hover {
     margin-top: 0;
   }
 }
-.Exhibitions {
+.Popular-exhibitions {
   max-width: 1200px;
   margin: 0 auto;
   padding: 5rem 2rem;
 }
-.Exhibitions .cards {
+.Popular-exhibitions .cards {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
 }
-.Exhibitions .cards article {
+.Popular-exhibitions .cards article {
   margin-top: 2rem;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
-.Exhibitions .cards article.fade-in {
+.Popular-exhibitions .cards article.fade-in {
   opacity: 1;
   transform: translateY(0);
 }
-.Exhibitions .cards article .text-container {
+.Popular-exhibitions .cards article .text-container {
   padding-bottom: 10px;
   margin-bottom: 20px;
   border-bottom: 1px solid #E5E5E5;
@@ -170,26 +171,29 @@ nav .primary-navigation .tickets:hover {
   justify-content: space-between;
   align-items: center;
 }
-.Exhibitions .cards article .text-container h3 {
+.Popular-exhibitions .cards article .text-container h3 {
   float: left;
 }
-.Exhibitions .cards article img {
+.Popular-exhibitions .cards article .text-container h3, .Popular-exhibitions .cards article .text-container button {
+  margin: 0;
+}
+.Popular-exhibitions .cards article img {
   width: 300px;
   height: 300px;
   object-fit: cover;
 }
 
 @media (min-width: 768px) {
-  .Exhibitions .cards article img {
+  .Popular-exhibitions .cards article img {
     width: 450px;
     height: 450px;
   }
 }
 @media (min-width: 1100px) {
-  .Exhibitions .cards {
+  .Popular-exhibitions .cards {
     flex-direction: row;
   }
-  .Exhibitions .cards article img {
+  .Popular-exhibitions .cards article img {
     width: 300px;
     height: 300px;
   }
@@ -661,39 +665,52 @@ button.action-btn:hover {
 
 .section-guidedtoursinfo {
   margin: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
 }
-.section-guidedtoursinfo img {
+.section-guidedtoursinfo .header-guidedtoursinfo p {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+}
+.section-guidedtoursinfo .header-guidedtoursinfo img {
   height: 400px;
-  width: 80%;
+  width: 100%;
   object-fit: cover;
   margin-bottom: 1rem;
 }
-.section-guidedtoursinfo table {
-  width: 90%;
+.section-guidedtoursinfo .text-guidedtoursinfo {
+  width: 100%;
+}
+.section-guidedtoursinfo .text-guidedtoursinfo ul li {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+.section-guidedtoursinfo .text-guidedtoursinfo p:first-of-type {
+  margin: 0;
+}
+.section-guidedtoursinfo .btn-goback {
+  max-width: 60px;
+}
+
+table {
+  width: 100%;
   max-width: 600px;
   margin: 0 auto;
 }
-.section-guidedtoursinfo table th, .section-guidedtoursinfo table td {
+table th, table td {
   padding: 1rem;
 }
-.section-guidedtoursinfo table tr {
+table tr {
   border: 1px solid rgba(229, 229, 229, 0.2);
 }
-.section-guidedtoursinfo table .btn-row {
+table .btn-row {
   text-align: center;
 }
-.section-guidedtoursinfo table .btn-row td {
+table .btn-row td {
   padding: 0;
   text-align: center;
 }
-.section-guidedtoursinfo table .btn-row td:last-child {
+table .btn-row td:last-child {
   padding: 1rem;
-}
-.section-guidedtoursinfo p {
-  max-width: 800px;
 }
 
 @media (min-width: 768px) {
@@ -719,6 +736,15 @@ button.action-btn:hover {
   .section-guidedtours .guidedtours-item img {
     height: 500px;
     object-position: bottom;
+  }
+  .section-guidedtoursinfo {
+    justify-content: start;
+    align-items: start;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .section-guidedtoursinfo .header-guidedtoursinfo {
+    grid-column: 1/3;
   }
 }
 

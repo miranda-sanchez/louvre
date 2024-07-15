@@ -1,26 +1,8 @@
 import React from "react";
-import olympism from "../img/olympism.webp";
-import torloniaCollection from "../img/torlonia-collection.jpg";
+import { Link } from "react-router-dom";
+import exhibitions from "../data/ExhibitionsData";
 
 const ExhibitionsSection = () => {
-  const exhibitions = [
-    {
-      imgSrc: olympism,
-      imgAlt: "A Greek vessel of the Marquis Campana",
-      title: "Olympism",
-      description: "Modern Invention, Ancient Legacy",
-      date: "24 April to 16 September 2024",
-    },
-    {
-      imgSrc: torloniaCollection,
-      imgAlt: "A sculpture from the Torlonia collection",
-      title: "Masterpieces from the Torlonia Collection",
-      description:
-        "The largest ever private collection of ancient Roman sculptures",
-      date: "26 June to 11 November 2024",
-    },
-  ];
-
   return (
     <section className="section-exhibitions">
       {exhibitions.map((exhibition, index) => (
@@ -30,6 +12,9 @@ const ExhibitionsSection = () => {
             <h2>{exhibition.title}</h2>
             <p>{exhibition.description}</p>
             <p>{exhibition.date}</p>
+            <Link to="/tickets">
+              <button className="action-btn">Book</button>
+            </Link>
           </div>
         </article>
       ))}

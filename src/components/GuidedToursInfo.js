@@ -5,9 +5,26 @@ import { MdArrowBack } from "react-icons/md";
 const GuidedToursInfo = ({ tour, onGoBack }) => {
   return (
     <section className="section-guidedtoursinfo">
-      <h2>{tour.title}</h2>
-      <img src={tour.imgSrc} alt={tour.alt} />
-      <p>{tour.longerDescription}</p>
+      <div className="header-guidedtoursinfo">
+        <p>More information about</p>
+        <h2>{tour.title}</h2>
+        <img src={tour.imgSrc} alt={tour.alt} />
+      </div>
+      <div className="text-guidedtoursinfo">
+        {Array.isArray(tour.longerDescription) ? (
+          tour.longerDescription.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))
+        ) : (
+          <p>{tour.longerDescription}</p>
+        )}
+        <p>The tour is available in the following languages:</p>
+        <ul>
+          {tour.languages.map((language, index) => (
+            <li key={index}>{language}</li>
+          ))}
+        </ul>
+      </div>
 
       <table>
         <tbody>
@@ -43,7 +60,7 @@ const GuidedToursInfo = ({ tour, onGoBack }) => {
         </tbody>
       </table>
 
-      <button onClick={onGoBack}>
+      <button className="btn-goback" onClick={onGoBack}>
         <MdArrowBack />
       </button>
     </section>

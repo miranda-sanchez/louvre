@@ -1,6 +1,6 @@
 import React from "react";
 import Hero from "../components/Hero";
-import Exhibitions from "../components/Exhibitions";
+import PopularExhibitions from "../components/PopularExhibitions";
 import Salle from "../components/Salle";
 import Collection from "../components/Collection";
 
@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <main>
       <Hero />
-      <Exhibitions />
+      <PopularExhibitions />
       <Salle />
       <Collection />
     </main>

@@ -10,8 +10,11 @@ const guidedTours = [
     title: "Welcome to the Louvre",
     description:
       "This guided tour will make you discover the must-see artworks at the Louvre",
-    longerDescription:
+    longerDescription: [
       "Discover the Mona Lisa, the Winged Victory of Samothrace, the Venus de Milo, and other masterpieces of the Louvre with trained guides who take you through the museum's most impressive spaces, such as the medieval moat, giving you a fascinating insight into the history of the palace.",
+      "As you wander through the grand halls and intimate galleries, you'll learn about the stories behind the artworks and the historical significance of the building itself. Whether you're a seasoned art enthusiast or a casual visitor, these tours are designed to enrich your understanding and appreciation of the Louvre's treasures.",
+      "Our guides will also highlight lesser-known gems and share anecdotes that bring each artwork to life, creating a memorable journey through centuries of art and history.",
+    ],
     days: "Monday to Saturday",
     hours: "9.45am to 2pm",
     languages: ["English", "Spanish", "French"],
@@ -39,8 +42,11 @@ const guidedTours = [
     title: "Welcome to the Louvre",
     description:
       "This guided tour will make you discover the must-see artworks at the Louvre",
-    longerDescription:
+    longerDescription: [
       "Discover the Mona Lisa, the Winged Victory of Samothrace, the Venus de Milo, and other masterpieces of the Louvre with trained guides who take you through the museum's most impressive spaces, such as the medieval moat, giving you a fascinating insight into the history of the palace.",
+      "As you wander through the grand halls and intimate galleries, you'll learn about the stories behind the artworks and the historical significance of the building itself. Whether you're a seasoned art enthusiast or a casual visitor, these tours are designed to enrich your understanding and appreciation of the Louvre's treasures.",
+      "Our guides will also highlight lesser-known gems and share anecdotes that bring each artwork to life, creating a memorable journey through centuries of art and history.",
+    ],
     days: "Monday to Saturday",
     hours: "9.45am to 2pm",
     languages: ["English", "Spanish", "French"],

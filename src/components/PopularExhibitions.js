@@ -16,7 +16,7 @@ const Exhibitions = () => {
   });
 
   return (
-    <section className="Exhibitions">
+    <section className="Popular-exhibitions">
       <h2>Popular exhibitions</h2>
       <div className="cards">
         <article

@@ -55,7 +55,7 @@ const GuidedToursSection = ({ onReadMore }) => {
         </div>
         <div>
           <Link to="/tickets">
-            <button className="action-btn">Buy</button>
+            <button className="action-btn">Book</button>
           </Link>
           <button onClick={handleReadMore}>Read more</button>
         </div>
