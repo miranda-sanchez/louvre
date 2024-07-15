@@ -673,7 +673,7 @@ button.action-btn:hover {
 }
 .section-guidedtoursinfo table {
   width: 90%;
-  max-width: 800px;
+  max-width: 600px;
   margin: 0 auto;
 }
 .section-guidedtoursinfo table th, .section-guidedtoursinfo table td {

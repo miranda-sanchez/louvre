@@ -1,21 +1,44 @@
-import React, { useState } from "react";
-import { Link, Route, Routes, useLocation } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import {
+  Link,
+  Route,
+  Routes,
+  useLocation,
+  useNavigate,
+  useParams,
+} from "react-router-dom";
 import ExhibitionsSection from "../components/ExhibitionsSection";
 import PageHeader from "../components/PageHeader";
 import headerImg from "../img/outside.jpg";
 import GuidedToursSection from "../components/GuidedToursSection";
 import GuidedToursInfo from "../components/GuidedToursInfo";
+import guidedTours from "../data/GuidedToursData"; // Import the guided tours data
 
 const Exhibitions = () => {
   const [selectedTour, setSelectedTour] = useState(null);
   const location = useLocation();
+  const navigate = useNavigate();
+  const { id } = useParams();
+
+  useEffect(() => {
+    if (id) {
+      const tour = guidedTours.find((tour) => tour.id === parseInt(id));
+      if (tour) {
+        setSelectedTour(tour);
+      } else {
+        navigate("/exhibitions/guided-tours");
+      }
+    }
+  }, [id, navigate]);
 
   const handleReadMore = (tour) => {
     setSelectedTour(tour);
+    navigate(`/exhibitions/guided-tours/${tour.id}`);
   };
 
   const handleGoBack = () => {
     setSelectedTour(null);
+    navigate("/exhibitions/guided-tours");
   };
 
   return (
@@ -28,7 +51,9 @@ const Exhibitions = () => {
         </li>
         <li
           className={
-            location.pathname === "/exhibitions/guided-tours" ? "active" : ""
+            location.pathname.startsWith("/exhibitions/guided-tours")
+              ? "active"
+              : ""
           }
         >
           <Link to="/exhibitions/guided-tours">Guided Tours</Link>
@@ -36,15 +61,15 @@ const Exhibitions = () => {
       </ul>
 
       <Routes>
-        <Route index element={<ExhibitionsSection />} />
+        <Route path="/" element={<ExhibitionsSection />} />
         <Route
           path="guided-tours"
+          element={<GuidedToursSection onReadMore={handleReadMore} />}
+        />
+        <Route
+          path="guided-tours/:id"
           element={
-            selectedTour ? (
-              <GuidedToursInfo tour={selectedTour} onGoBack={handleGoBack} />
-            ) : (
-              <GuidedToursSection onReadMore={handleReadMore} />
-            )
+            <GuidedToursInfo tour={selectedTour} onGoBack={handleGoBack} />
           }
         />
       </Routes>
