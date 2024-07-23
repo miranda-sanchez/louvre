@@ -1,10 +1,67 @@
-import React from "react";
+import React, { useState } from "react";
 import PageHeader from "../components/PageHeader";
 import headerImg from "../img/outside2.jpg";
-import outsideImg from "../img/LouvreOutside.webp";
+import louvreImg from "../img/louvreImg.webp";
+import tuileriesImg from "../img/tuileries.webp";
+import delacroixImg from "../img/delacroixImg.webp";
 import insideImg from "../img/louvre-pyramid-outside.webp";
 
+const visitData = [
+  {
+    title: "Musée du Louvre",
+    imgSrc: louvreImg,
+    altImg: "The Louvre from the ceiling with a gargoyle in the foreground",
+    rows: [
+      { day: "Monday, Thursday, Saturday, and Sunday", hours: "9am to 6pm" },
+      { day: "Wednesday and Friday", hours: "9am to 9pm" },
+      { day: "Tuesday", hours: "Closed" },
+      { note: "Last entry: 1 hour before closing" },
+      { note: "Clearing of rooms: 30 minutes before closing" },
+      {
+        note: "Public holidays: the Louvre is closed on 1 January, 1 May and 25 December. It remains open on all other public holidays unless they fall on a Tuesday, the museum's day of closure.",
+      },
+    ],
+  },
+  {
+    title: "Tuileries Garden",
+    imgSrc: tuileriesImg,
+    altImg: "The garden of Louvre",
+    rows: [
+      { day: "June, July and August", hours: "7am to 11pm" },
+      { day: "April, May and September", hours: "7am to 9pm" },
+      {
+        day: "January, February, March, October, November and December",
+        hours: "7.30am to 7.30",
+      },
+      {
+        note: "Visitors will be asked to vacate the premises 30 minutes before closing",
+      },
+      {
+        note: "From 17 June to 25 September, the Tuileries Garden will be partially or totally inaccessible to the general public due to the Olympic and Paralympic Games. ",
+      },
+    ],
+  },
+  {
+    title: "Musée Eugène-Delacroix",
+    imgSrc: delacroixImg,
+    altImg: "The Musée Eugène-Delacroix from its garden",
+    rows: [
+      { day: "Monday, Thursday, Saturday and Sunday", hours: "9am to 6pm" },
+      { day: "Wednesday and Friday", hours: "9am to 9pm" },
+      { day: "Tuesday", hours: "Closed" },
+      {
+        note: "Evening opening until 8.30 p.m. on the first Thursday of the month (except 1 August, closing at 5.30 p.m.)",
+      },
+      {
+        note: "Louvre-Delacroix combined ticket: A ticket gives you access to the permanent collections and temporary exhibitions of the Louvre, as well as to the Eugène-Delacroix National Museum the same day and the day after your visit of the Louvre museum.",
+      },
+    ],
+  },
+];
+
 const Visit = () => {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
   return (
     <main>
       <PageHeader title="Visit" backgroundImage={headerImg} />
@@ -12,41 +69,34 @@ const Visit = () => {
       <div className="Visit">
         <section className="when-to-visit">
           <h2>When to visit</h2>
+
+          <nav className="when-to-visit-nav">
+            <ul>
+              {visitData.map((item, index) => (
+                <li key={index} onClick={() => setSelectedIndex(index)}>
+                  {item.title}
+                </li>
+              ))}
+            </ul>
+          </nav>
+
           <div className="when-to-visit-content">
             <img
-              src={outsideImg}
-              alt="The Louvre from the ceiling with a gargoyle in the foreground"
+              src={visitData[selectedIndex].imgSrc}
+              alt={visitData[selectedIndex].imgAlt}
             />
             <table className="visit-table">
               <tbody>
-                <tr>
-                  <th>Monday, Thursday, Saturday, and Sunday</th>
-                  <td className="emphasis">9am to 6pm</td>
-                </tr>
-                <tr>
-                  <th>Wednesday and Friday</th>
-                  <td className="emphasis">9am to 9pm</td>
-                </tr>
-                <tr>
-                  <th>Tuesday</th>
-                  <td className="emphasis">Closed</td>
-                </tr>
-                <tr>
-                  <td colSpan="2">Last entry: 1 hour before closing</td>
-                </tr>
-                <tr>
-                  <td colSpan="2">
-                    Clearing of rooms: 30 minutes before closing
-                  </td>
-                </tr>
-                <tr>
-                  <td colSpan="2">
-                    Public holidays: the Louvre is closed on 1 January, 1 May
-                    and 25 December. It remains open on all other public
-                    holidays unless they fall on a Tuesday, the museum's day of
-                    closure.
-                  </td>
-                </tr>
+                {visitData[selectedIndex].rows.map((row, index) => (
+                  <tr key={index}>
+                    {row.day ? (
+                      <th>{row.day}</th>
+                    ) : (
+                      <td colSpan="2">{row.note}</td>
+                    )}
+                    {row.hours && <td className="emphasis">{row.hours}</td>}
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>

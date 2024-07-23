@@ -2,17 +2,16 @@
 @use "../base/colors" as *;
 
 .Tickets {
-
         .tickets-body {
             background-color: rgba($bg, 0.8);
             border-radius: 20px;
-            padding: 30px;
+            margin: 20px;
 
             h2 {
                 margin-bottom: 2rem;
             }
 
-            p{
+            .main-description {
                 margin: 0 auto;
                 max-width: 600px;
                 text-align: center
@@ -33,6 +32,7 @@
                     &:last-child {
                         border: none;
                     }
+                    
 
                     img {
                         display: none;
@@ -46,11 +46,6 @@
                 }
             }
         }
-
-    .tickets-prices {
-        margin: 2rem;
-        
-    }
     
 }
 
@@ -71,10 +66,6 @@
             &:last-child {
                 border: none;
                 border: 1px solid rgba($light, 0.2);   
-            }
-
-            p {
-                text-align: justify;
             }
 
             img {

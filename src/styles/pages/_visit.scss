@@ -7,6 +7,7 @@
         h2 {
             text-align: left;
             font-family: "Red Hat Display", sans-serif;
+            margin-top: 4rem;
 
             &::after {
                 content:"";
@@ -17,15 +18,30 @@
         }
 
     .when-to-visit {
-        margin: 40px 0;
+
+        
+        h2 {
+            flex-grow: 2;
+        }
+
+        .when-to-visit-nav ul{
+            @include flexbox(flex, start, center);
+            width: 100%;
+            li {
+                margin-right: 1rem
+            }
+        }
+
         
         .when-to-visit-content {
             border-radius: 10px;
             background-color: rgba($light, 0.2);
             max-width: 1000px;
             margin: 0 auto;
+            
             img {
                 display: none;
+                
             }
         
             
@@ -57,7 +73,6 @@
     }
     
     .visit-tickets {
-        margin: 40px 0;
         p {
             text-align: center;
         }
@@ -97,7 +112,7 @@
             img {
                 display: block;
                 width: 100%;
-                height: 100%;
+                height: 700px;
                 object-fit: cover;
                 border-radius: 10px 0 0 10px ;
             }

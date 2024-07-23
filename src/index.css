@@ -541,12 +541,12 @@ table .btn-row td:last-child {
 .Tickets .tickets-body {
   background-color: rgba(39, 39, 39, 0.8);
   border-radius: 20px;
-  padding: 30px;
+  margin: 20px;
 }
 .Tickets .tickets-body h2 {
   margin-bottom: 2rem;
 }
-.Tickets .tickets-body p {
+.Tickets .tickets-body .main-description {
   margin: 0 auto;
   max-width: 600px;
   text-align: center;
@@ -574,9 +574,6 @@ table .btn-row td:last-child {
 .Tickets .tickets-body .tickets-options article button:first-of-type {
   margin-right: 1rem;
 }
-.Tickets .tickets-prices {
-  margin: 2rem;
-}
 
 @media (min-width: 768px) {
   .Tickets .tickets-body .tickets-options {
@@ -595,9 +592,6 @@ table .btn-row td:last-child {
   .Tickets .tickets-body .tickets-options article:last-child {
     border: none;
     border: 1px solid rgba(229, 229, 229, 0.2);
-  }
-  .Tickets .tickets-body .tickets-options article p {
-    text-align: justify;
   }
   .Tickets .tickets-body .tickets-options article img {
     margin: 0 auto;
@@ -778,6 +772,7 @@ table .btn-row td:last-child {
 .Visit h2 {
   text-align: left;
   font-family: "Red Hat Display", sans-serif;
+  margin-top: 4rem;
 }
 .Visit h2::after {
   content: "";
@@ -785,8 +780,17 @@ table .btn-row td:last-child {
   background-color: rgba(229, 229, 229, 0.5);
   display: block;
 }
-.Visit .when-to-visit {
-  margin: 40px 0;
+.Visit .when-to-visit h2 {
+  flex-grow: 2;
+}
+.Visit .when-to-visit .when-to-visit-nav ul {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+}
+.Visit .when-to-visit .when-to-visit-nav ul li {
+  margin-right: 1rem;
 }
 .Visit .when-to-visit .when-to-visit-content {
   border-radius: 10px;
@@ -815,9 +819,6 @@ table .btn-row td:last-child {
   font-weight: 700;
   text-transform: uppercase;
 }
-.Visit .visit-tickets {
-  margin: 40px 0;
-}
 .Visit .visit-tickets p {
   text-align: center;
 }
@@ -845,7 +846,7 @@ table .btn-row td:last-child {
   .Visit .when-to-visit .when-to-visit-content img {
     display: block;
     width: 100%;
-    height: 100%;
+    height: 700px;
     object-fit: cover;
     border-radius: 10px 0 0 10px;
   }

@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
 import headerImg from "../img/Garden.webp";
 import img1 from "../img/tickets-individual-visit.jpg";
@@ -55,7 +54,7 @@ const Tickets = () => {
 
       <section className="tickets-body">
         <h2>Choose your ticket</h2>
-        <p>
+        <p className="main-description">
           A ticket gives you access to the permanent collections and temporary
           exhibitions of the Louvre, as well as to the Eugène-Delacroix National
           Museum the same day and the day after your visit of the Louvre museum.
