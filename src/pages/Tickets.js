@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
 import headerImg from "../img/Garden.webp";
 import img1 from "../img/tickets-individual-visit.jpg";

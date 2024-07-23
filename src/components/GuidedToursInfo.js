@@ -18,12 +18,16 @@ const GuidedToursInfo = ({ tour, onGoBack }) => {
         ) : (
           <p>{tour.longerDescription}</p>
         )}
-        <p>The tour is available in the following languages:</p>
-        <ul>
-          {tour.languages.map((language, index) => (
-            <li key={index}>{language}</li>
-          ))}
-        </ul>
+        <div className="important-info">
+          <h3>The tour is available in</h3>
+          <p className="languages">
+            {tour.languages.length > 1
+              ? tour.languages.slice(0, -1).join(", ") +
+                " & " +
+                tour.languages.slice(-1)
+              : tour.languages[0]}
+          </p>
+        </div>
       </div>
 
       <table>

@@ -119,12 +119,12 @@
     }
     .text-guidedtoursinfo {
         width: 100%;
-        ul li {          
-           list-style-type: disc; 
-           list-style-position: inside;
-        }
         p:first-of-type {
             margin: 0;
+        }
+        .languages {
+            text-align: center;
+            
         }
     }
     
@@ -133,13 +133,6 @@
     }
 
 }
-
-    
-
-
-
-    
-
 
 @media (min-width: 768px) { 
     .section-exhibitions {

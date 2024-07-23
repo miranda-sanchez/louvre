@@ -522,6 +522,16 @@ table .btn-row td:last-child {
   padding: 1rem;
 }
 
+.important-info {
+  background-color: rgba(229, 229, 229, 0.2);
+  padding: 10px 20px;
+  margin: 2rem 0;
+  border-radius: 20px;
+}
+.important-info h3 {
+  text-align: center;
+}
+
 @media (min-width: 768px) {
   body {
     font-size: 18px;
@@ -539,12 +549,13 @@ table .btn-row td:last-child {
 .Tickets .tickets-body p {
   margin: 0 auto;
   max-width: 600px;
+  text-align: center;
 }
 .Tickets .tickets-body .tickets-options {
   display: grid;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
   margin-top: 2rem;
 }
 .Tickets .tickets-body .tickets-options article {
@@ -552,6 +563,7 @@ table .btn-row td:last-child {
   background-color: rgba(39, 39, 39, 0.95);
   cursor: pointer;
   border-bottom: 1px solid rgba(229, 229, 229, 0.2);
+  border-radius: 5px;
 }
 .Tickets .tickets-body .tickets-options article:last-child {
   border: none;
@@ -716,12 +728,11 @@ table .btn-row td:last-child {
 .section-guidedtoursinfo .text-guidedtoursinfo {
   width: 100%;
 }
-.section-guidedtoursinfo .text-guidedtoursinfo ul li {
-  list-style-type: disc;
-  list-style-position: inside;
-}
 .section-guidedtoursinfo .text-guidedtoursinfo p:first-of-type {
   margin: 0;
+}
+.section-guidedtoursinfo .text-guidedtoursinfo .languages {
+  text-align: center;
 }
 .section-guidedtoursinfo .btn-goback {
   max-width: 60px;
@@ -761,71 +772,97 @@ table .btn-row td:last-child {
     grid-column: 1/3;
   }
 }
-.when-to-visit {
-  margin: 20px;
-  padding: 20px;
+.Visit {
+  margin: 40px 20px;
 }
-.when-to-visit .when-to-visit-content {
+.Visit h2 {
+  text-align: left;
+  font-family: "Red Hat Display", sans-serif;
+}
+.Visit h2::after {
+  content: "";
+  height: 1px;
+  background-color: rgba(229, 229, 229, 0.5);
+  display: block;
+}
+.Visit .when-to-visit {
+  margin: 40px 0;
+}
+.Visit .when-to-visit .when-to-visit-content {
   border-radius: 10px;
   background-color: rgba(229, 229, 229, 0.2);
+  max-width: 1000px;
+  margin: 0 auto;
 }
-.when-to-visit .when-to-visit-content img {
+.Visit .when-to-visit .when-to-visit-content img {
   display: none;
 }
-
-.visit-table {
+.Visit .visit-table {
   padding: 10px;
 }
-.visit-table th {
+.Visit .visit-table th {
   font-weight: 400;
 }
-.visit-table tr {
+.Visit .visit-table tr {
   border: none;
   border-bottom: 1px solid rgba(229, 229, 229, 0.2);
 }
-.visit-table tr:last-of-type {
+.Visit .visit-table tr:last-of-type {
   border-bottom: none;
 }
-.visit-table tr .emphasis {
+.Visit .visit-table tr .emphasis {
   font-size: 1.2rem;
   font-weight: 700;
   text-transform: uppercase;
 }
-
-.visit-tickets {
-  margin: 20px;
+.Visit .visit-tickets {
+  margin: 40px 0;
 }
-.visit-tickets p {
+.Visit .visit-tickets p {
   text-align: center;
 }
-
-.important-info {
-  background-color: rgba(229, 229, 229, 0.2);
-  padding: 10px 20px;
-  margin: 2rem 0;
-  border-radius: 20px;
+.Visit .visit-eligibility img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 30px;
 }
-.important-info h3 {
-  text-align: center;
+.Visit .visit-eligibility ul li {
+  margin-bottom: 1rem;
+}
+.Visit .visit-eligibility ul li .note {
+  display: block;
+  color: rgba(229, 229, 229, 0.5);
+  margin-left: 1.5rem;
 }
 
 @media (min-width: 768px) {
-  .when-to-visit .when-to-visit-content {
+  .Visit .when-to-visit .when-to-visit-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
-  .when-to-visit .when-to-visit-content img {
+  .Visit .when-to-visit .when-to-visit-content img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px 0 0 10px;
   }
-  .visit-tickets .visit-tickets-content {
+  .Visit .visit-tickets .visit-tickets-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+  }
+  .Visit .visit-eligibility {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .Visit .visit-eligibility h2 {
+    grid-column: span 2;
   }
 }
 

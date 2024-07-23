@@ -15,11 +15,12 @@
             p{
                 margin: 0 auto;
                 max-width: 600px;
+                text-align: center
             }
 
             .tickets-options {
                 @include flexbox(grid, center, center);
-                gap: 20px;
+                gap: 30px;
                 margin-top: 2rem;
 
                 article {
@@ -27,6 +28,7 @@
                     background-color: rgba($bg, 0.95);
                     cursor: pointer;
                     border-bottom: 1px solid rgba($light, 0.2);
+                    border-radius: 5px;
 
                     &:last-child {
                         border: none;

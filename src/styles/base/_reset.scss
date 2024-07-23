@@ -134,6 +134,17 @@ table {
   }
 }
 
+.important-info {
+  background-color: rgba($light, 0.2);
+  padding: 10px 20px;
+  margin: 2rem 0;
+  border-radius: 20px;
+  h3 {
+      text-align: center;
+  }
+
+}
+
 
 
 @media (min-width: 768px) {
