@@ -617,6 +617,7 @@ table .btn-row td:last-child {
   align-items: center;
   margin: 20px;
   margin-bottom: 30px;
+  width: 100%;
 }
 .exhibitions-menu li {
   margin-right: 1.5rem;
@@ -791,6 +792,21 @@ table .btn-row td:last-child {
 }
 .Visit .when-to-visit .when-to-visit-nav ul li {
   margin-right: 1rem;
+  cursor: pointer;
+  padding: 15px 0;
+  border-radius: 50px;
+  position: relative;
+}
+.Visit .when-to-visit .when-to-visit-nav ul li.active::after {
+  content: "";
+  display: block;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: rgba(229, 229, 229, 0.1);
+  position: absolute;
+  bottom: 5px;
+  left: -10px;
 }
 .Visit .when-to-visit .when-to-visit-content {
   border-radius: 10px;
@@ -864,6 +880,11 @@ table .btn-row td:last-child {
   }
   .Visit .visit-eligibility h2 {
     grid-column: span 2;
+  }
+}
+@media (max-width: 354px) {
+  .Visit .when-to-visit .when-to-visit-nav ul {
+    flex-direction: column;
   }
 }
 

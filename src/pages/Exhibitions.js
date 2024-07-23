@@ -44,21 +44,22 @@ const Exhibitions = () => {
   return (
     <main>
       <PageHeader title="Exhibitions" backgroundImage={headerImg} />
-
-      <ul className="exhibitions-menu">
-        <li className={location.pathname === "/exhibitions" ? "active" : ""}>
-          <Link to="/exhibitions">Exhibitions</Link>
-        </li>
-        <li
-          className={
-            location.pathname.startsWith("/exhibitions/guided-tours")
-              ? "active"
-              : ""
-          }
-        >
-          <Link to="/exhibitions/guided-tours">Guided Tours</Link>
-        </li>
-      </ul>
+      <nav>
+        <ul className="exhibitions-menu">
+          <li className={location.pathname === "/exhibitions" ? "active" : ""}>
+            <Link to="/exhibitions">Exhibitions</Link>
+          </li>
+          <li
+            className={
+              location.pathname.startsWith("/exhibitions/guided-tours")
+                ? "active"
+                : ""
+            }
+          >
+            <Link to="/exhibitions/guided-tours">Guided Tours</Link>
+          </li>
+        </ul>
+      </nav>
 
       <Routes>
         <Route path="/" element={<ExhibitionsSection />} />

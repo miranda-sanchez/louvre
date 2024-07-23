@@ -73,7 +73,11 @@ const Visit = () => {
           <nav className="when-to-visit-nav">
             <ul>
               {visitData.map((item, index) => (
-                <li key={index} onClick={() => setSelectedIndex(index)}>
+                <li
+                  key={index}
+                  onClick={() => setSelectedIndex(index)}
+                  className={selectedIndex === index ? "active" : ""}
+                >
                   {item.title}
                 </li>
               ))}

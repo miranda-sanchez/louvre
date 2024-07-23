@@ -6,6 +6,7 @@
     @include flexbox(flex, left, center);
     margin: 20px;
     margin-bottom: 30px;
+    width: 100%;
     li {
         margin-right: 1.5rem;
         cursor: pointer;
