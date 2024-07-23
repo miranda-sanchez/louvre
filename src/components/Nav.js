@@ -1,14 +1,19 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { MdMenu, MdClose } from "react-icons/md";
 import logo from "../img/LogoLouvre.png";
 
 const Nav = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const location = useLocation();
 
   const handleToggleNav = () => {
     setIsNavOpen(!isNavOpen);
   };
+
+  useEffect(() => {
+    setIsNavOpen(false);
+  }, [location]);
 
   return (
     <nav>
