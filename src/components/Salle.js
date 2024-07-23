@@ -3,9 +3,9 @@ import React from "react";
 const Salle = () => {
   return (
     <section className="Salle">
-      <div>
+      <button className="btn-salle">
         Explore the <strong>Salle des Cariatides</strong>
-      </div>
+      </button>
     </section>
   );
 };

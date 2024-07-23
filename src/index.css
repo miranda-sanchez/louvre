@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
@@ -207,14 +208,22 @@ nav .primary-navigation .tickets:hover {
   justify-content: center;
   align-items: center;
 }
-.Salle div {
-  background-color: rgba(229, 229, 229, 0.95);
+.Salle .btn-salle {
+  background-color: #E5E5E5;
   color: #272727;
   font-family: "Playfair Display", serif;
-  font-weight: 700;
+  font-size: 1.5rem;
   padding: 2rem;
+  margin: 2rem;
   border-radius: 50px 0 50px 0;
   cursor: pointer;
+  border: 2px solid transparent; /* Borde inicial transparente */
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+.Salle .btn-salle:hover {
+  background-color: #016659; /* Cambia el color de fondo en hover */
+  color: #E5E5E5; /* Cambia el color del texto en hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra sutil */
 }
 
 .Collection {
@@ -421,7 +430,7 @@ main {
   flex: 1;
 }
 
-h1, h2, h3 {
+h1, h2 {
   letter-spacing: 0.1rem;
   font-family: "Playfair Display", serif;
 }
@@ -429,6 +438,10 @@ h1, h2, h3 {
 h2 {
   text-align: center;
   margin-bottom: 1rem;
+}
+
+h3 {
+  letter-spacing: 0.1rem;
 }
 
 p {
@@ -481,9 +494,32 @@ button:hover {
 button.action-btn {
   background-color: #016659;
   border: 1px solid #016659;
+  font-weight: 700;
 }
 button.action-btn:hover {
   background-color: rgba(1, 102, 89, 0.7);
+}
+
+table {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+table th, table td {
+  padding: 1rem;
+}
+table tr {
+  border: 1px solid rgba(229, 229, 229, 0.2);
+}
+table .btn-row {
+  text-align: center;
+}
+table .btn-row td {
+  padding: 0;
+  text-align: center;
+}
+table .btn-row td:last-child {
+  padding: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -691,28 +727,6 @@ button.action-btn:hover {
   max-width: 60px;
 }
 
-table {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-}
-table th, table td {
-  padding: 1rem;
-}
-table tr {
-  border: 1px solid rgba(229, 229, 229, 0.2);
-}
-table .btn-row {
-  text-align: center;
-}
-table .btn-row td {
-  padding: 0;
-  text-align: center;
-}
-table .btn-row td:last-child {
-  padding: 1rem;
-}
-
 @media (min-width: 768px) {
   .section-exhibitions .exhibition-item {
     display: grid;
@@ -745,6 +759,73 @@ table .btn-row td:last-child {
   }
   .section-guidedtoursinfo .header-guidedtoursinfo {
     grid-column: 1/3;
+  }
+}
+.when-to-visit {
+  margin: 20px;
+  padding: 20px;
+}
+.when-to-visit .when-to-visit-content {
+  border-radius: 10px;
+  background-color: rgba(229, 229, 229, 0.2);
+}
+.when-to-visit .when-to-visit-content img {
+  display: none;
+}
+
+.visit-table {
+  padding: 10px;
+}
+.visit-table th {
+  font-weight: 400;
+}
+.visit-table tr {
+  border: none;
+  border-bottom: 1px solid rgba(229, 229, 229, 0.2);
+}
+.visit-table tr:last-of-type {
+  border-bottom: none;
+}
+.visit-table tr .emphasis {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.visit-tickets {
+  margin: 20px;
+}
+.visit-tickets p {
+  text-align: center;
+}
+
+.important-info {
+  background-color: rgba(229, 229, 229, 0.2);
+  padding: 10px 20px;
+  margin: 2rem 0;
+  border-radius: 20px;
+}
+.important-info h3 {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .when-to-visit .when-to-visit-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .when-to-visit .when-to-visit-content img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+  }
+  .visit-tickets .visit-tickets-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
 }
 

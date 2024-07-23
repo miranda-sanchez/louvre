@@ -8,17 +8,25 @@
     background-position: center;
     @include flexbox(flex, center, center);
 
-    div {
-        background-color: rgba($light, 0.95);
+    .btn-salle {
+        background-color: $light;
         color: $bg;
-
         font-family: "Playfair Display", serif;
-        font-weight: 700;
-
+        font-size: 1.5rem;
         padding: 2rem;
+        margin: 2rem;
         border-radius: 50px 0 50px 0;
-
         cursor: pointer;
+        border: 2px solid transparent; /* Borde inicial transparente */
+        transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            background-color: $action; /* Cambia el color de fondo en hover */
+            color: $light; /* Cambia el color del texto en hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra sutil */
+        }
     }
+
+    
 
 }

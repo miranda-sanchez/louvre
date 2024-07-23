@@ -134,27 +134,8 @@
 
 }
 
-    table {
-        width: 100%;
-        max-width: 600px;
-        margin: 0 auto;
-        th, td {
-            padding: 1rem;
-        }
-        tr {
-        border: 1px solid rgba($light, 0.2);
-        }
-        .btn-row {
-            text-align: center;
-            td {
-                padding: 0;
-                text-align: center;
-            &:last-child {
-                padding: 1rem;
-            }
-        }
-    }
-}
+    
+
 
 
     
