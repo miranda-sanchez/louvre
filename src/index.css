@@ -19,7 +19,7 @@
 
 .scrolled {
   background-color: rgba(39, 39, 39, 0.95);
-  padding: 1rem 2rem;
+  padding: 10px 20px;
   transition: 0.5s ease-out;
 }
 
@@ -227,7 +227,7 @@ nav .primary-navigation .tickets:hover {
 }
 
 .Collection {
-  margin: 2rem;
+  margin: 20px;
   display: flex;
   flex-direction: column;
 }
