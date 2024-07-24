@@ -15,47 +15,56 @@ const Collection = () => {
     {
       img: img1,
       title: "The Raft of the Medusa",
-      description: "Descripción del artículo 1",
+      artist: "Théodore Géricault, 1819",
+      medium: "Oil on canvas, 490cm × 716cm",
     },
     {
       img: img2,
       title: "The Wedding Feast at Cana",
-      description: "Descripción del artículo 2",
+      artist: "Paolo Veronese, 1563",
+      medium: "Oil on canvas, 6.77m × 9.94m",
     },
     {
       img: img3,
       title: "Winged Victory of Samothrace",
-      description: "Descripción del artículo 2",
+      artist: "Anonymous, 200–190 BC",
+      medium: "Parian marble, 244cm",
     },
     {
       img: img4,
       title: "Mona Lisa",
-      description: "Descripción del artículo 2",
+      artist: "Leonardo da Vinci, 1506",
+      medium: "	Oil on poplar panel, 77cm × 53cm",
     },
     {
       img: img5,
       title: "The Coronation of Napoleon",
-      description: "Descripción del artículo 2",
+      artist: "Jacques-Louis David, 1807 ",
+      medium: "Oil on canvas, 6.21m × 9.79m",
     },
     {
       img: img6,
       title: "The Seated Scribes",
-      description: "Descripción del artículo 2",
+      artist: "Anonymous; 4th Dynasty, 2620–2500 BCE",
+      medium: "Limestone, 53.7cm × 44cm × 35 cm",
     },
     {
       img: img7,
       title: "Dying Slave",
-      description: "Descripción del artículo 2",
+      artist: "Michelangelo, 1516",
+      medium: "Marble, 215cm",
     },
     {
       img: img8,
       title: "La Belle Ferronnière",
-      description: "Descripción del artículo 2",
+      artist: "	Leonardo da Vinci or his Milanese circle, 1496",
+      medium: "Oil on wood, 62cm × 44cm",
     },
     {
       img: img9,
-      title: "Diana of Versaille",
-      description: "Descripción del artículo 2",
+      title: "Diana of Versailles",
+      artist: "Anonymous, c. 325 BC",
+      medium: "Marble, 2.01m",
     },
   ];
 
@@ -67,10 +76,10 @@ const Collection = () => {
 
   const breakpointColumnsObj = {
     default: 5,
-    1200: 4,
-    992: 3,
-    768: 2,
-    576: 1,
+    1700: 4,
+    1300: 3,
+    850: 2,
+    620: 1,
   };
 
   return (
@@ -86,7 +95,8 @@ const Collection = () => {
             <img src={item.img} alt={item.title} />
             <div className="item-info">
               <h3 className="title">{item.title}</h3>
-              <p className="description">{item.description}</p>
+              <p className="description">{item.artist}</p>
+              <p className="description">{item.medium}</p>
             </div>
           </article>
         ))}

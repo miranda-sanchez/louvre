@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
 .Header {
   max-width: 1800px;
-  padding: 2rem;
+  padding: 20px;
   width: 100%;
   z-index: 999999;
   display: flex;
@@ -274,11 +274,12 @@ nav .primary-navigation .tickets:hover {
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.1s ease;
 }
 .Collection .masonry-gallery .masonry-grid_column .collection-item .item-info .title {
-  margin-top: 0.5rem;
+  margin-top: 5px;
   font-size: 1.2rem;
 }
 .Collection .masonry-gallery .masonry-grid_column .collection-item .item-info .description {
-  margin-top: 0.2rem;
+  margin: 0;
+  color: rgba(229, 229, 229, 0.7);
 }
 .Collection button {
   margin: 0 auto;
