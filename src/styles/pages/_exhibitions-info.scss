@@ -1,9 +1,11 @@
 @use "../base/mixins" as *;
 @use "../base/colors" as *;
 .ExhibitionsInfo {
-    @include flexbox(flex, center, center);
+    @include flexbox (flex, center, center);
     flex-direction: column;
     .exhibitions-info-header {
+        @include flexbox (flex, center, center);
+        flex-direction: column;
         height: 100vh;
         
         h1 {

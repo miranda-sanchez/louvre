@@ -779,6 +779,10 @@ table .btn-row td:last-child {
   flex-direction: column;
 }
 .ExhibitionsInfo .exhibitions-info-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   height: 100vh;
 }
 .ExhibitionsInfo .exhibitions-info-header h1 {

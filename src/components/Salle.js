@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const ExhibitionsInfo = () => {
   return (
     <section className="Salle">
-      <Link to="/exhibitions-info">
+      <Link to="/exhibitions/0">
         <button className="btn-salle">
           Explore the <strong>Salle des Cariatides</strong>
         </button>
