@@ -1,0 +1,31 @@
+@use "../base/mixins" as *;
+@use "../base/colors" as *;
+.ExhibitionsInfo {
+    @include flexbox(flex, center, center);
+    flex-direction: column;
+    .exhibitions-info-header {
+        height: 100vh;
+        
+        h1 {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+
+    }
+
+    .exhibitions-info-img {
+        width: 100%;
+        img {
+            height: 80vh;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    
+
+    .exhibitions-info-content {
+        margin: 40px 4rem;
+        max-width: 800px;
+    }
+}
+

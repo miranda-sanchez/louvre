@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useSwipeable } from "react-swipeable";
 import { MdArrowBack, MdArrowForward } from "react-icons/md";
-import guidedTours from "../data/GuidedToursData"; // Import the guided tours data
+import guidedTours from "../data/GuidedToursData";
 
 const GuidedToursSection = ({ onReadMore }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -41,6 +41,7 @@ const GuidedToursSection = ({ onReadMore }) => {
       </button>
       <article className="guidedtours-item">
         <img
+          onClick={handleReadMore}
           src={guidedTours[currentIndex].imgSrc}
           alt={guidedTours[currentIndex].alt}
         />

@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Visit from "./pages/Visit";
 import Exhibitions from "./pages/Exhibitions";
 import Tickets from "./pages/Tickets";
+import ExhibitionsInfo from "./components/ExhibitionsInfo";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route index exact="true" path="/" element={<Home />}></Route>
         <Route path="/visit" element={<Visit />}></Route>
         <Route path="/exhibitions/*" element={<Exhibitions />}></Route>
+        <Route path="/exhibitions/:id" element={<ExhibitionsInfo />}></Route>
         <Route path="/tickets" element={<Tickets />}></Route>
       </Routes>
       <Footer />

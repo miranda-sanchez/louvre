@@ -658,6 +658,9 @@ table .btn-row td:last-child {
 .section-exhibitions .exhibition-item:last-of-type {
   border-bottom: none;
 }
+.section-exhibitions .exhibition-item .action-btn {
+  margin-right: 1rem;
+}
 
 .section-guidedtours {
   margin: 20px;
@@ -687,6 +690,7 @@ table .btn-row td:last-child {
   width: 90%;
   object-fit: cover;
   object-position: top;
+  cursor: pointer;
 }
 .section-guidedtours .guidedtours-item p {
   text-align: center;
@@ -768,6 +772,32 @@ table .btn-row td:last-child {
     grid-column: 1/3;
   }
 }
+.ExhibitionsInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.ExhibitionsInfo .exhibitions-info-header {
+  height: 100vh;
+}
+.ExhibitionsInfo .exhibitions-info-header h1 {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+.ExhibitionsInfo .exhibitions-info-img {
+  width: 100%;
+}
+.ExhibitionsInfo .exhibitions-info-img img {
+  height: 80vh;
+  width: 100%;
+  object-fit: cover;
+}
+.ExhibitionsInfo .exhibitions-info-content {
+  margin: 40px 4rem;
+  max-width: 800px;
+}
+
 .Visit {
   margin: 40px 20px;
 }
