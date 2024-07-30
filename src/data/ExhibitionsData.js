@@ -3,7 +3,7 @@ import torloniaCollection from "../img/torlonia-collection.jpg";
 import Velazquez from "../img/VelazquezMariaTeresa.jpg";
 import Degas from "../img/DegasMaryCassatt.jpg";
 import Michaelangelo from "../img/img8.jpg";
-import Cariatides from "../img/Cariatides.jpg";
+import Cariatides from "../img/Cariatides.webp";
 
 const exhibitions = [
   {
