@@ -42,6 +42,9 @@ const Nav = () => {
         <Link to="/exhibitions">
           <li className="active">Exhibitions</li>
         </Link>
+        <Link to="/guided-tours">
+          <li className="active">Guided Tours</li>
+        </Link>
         <Link to="/tickets">
           <li className="active tickets">Tickets</li>
         </Link>

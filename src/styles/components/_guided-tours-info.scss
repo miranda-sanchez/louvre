@@ -1,0 +1,49 @@
+.section-guidedtoursinfo {
+    margin: 20px;
+    display: grid;
+    .header-guidedtoursinfo{
+        p {
+            text-align: center;
+            font-family: "Playfair Display", serif;
+        }
+        h2 {
+            margin-bottom: 2rem;
+        }
+        img {
+            height: 400px;
+            width: 100%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+    
+    
+    }
+    .text-guidedtoursinfo {
+        width: 100%;
+        p:first-of-type {
+            margin: 0;
+        }
+        .languages {
+            text-align: center;
+            
+        }
+    }
+    
+    .btn-goback {
+        max-width: 60px;
+    }
+
+}
+
+@media (min-width: 768px) { 
+    .section-guidedtoursinfo {
+        justify-content: start;
+        align-items: start;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        .header-guidedtoursinfo {
+            grid-column: 1 / 3;
+        }
+        
+    }
+}

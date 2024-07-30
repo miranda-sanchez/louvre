@@ -6,6 +6,7 @@ import Visit from "./pages/Visit";
 import Exhibitions from "./pages/Exhibitions";
 import Tickets from "./pages/Tickets";
 import ExhibitionsInfo from "./components/ExhibitionsInfo";
+import GuidedTours from "./pages/GuidedTours";
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
         <Route path="/visit" element={<Visit />}></Route>
         <Route path="/exhibitions/*" element={<Exhibitions />}></Route>
         <Route path="/exhibitions/:id" element={<ExhibitionsInfo />}></Route>
+        <Route path="/exhibitions/:id" element={<ExhibitionsInfo />}></Route>
+        <Route path="/guided-tours" element={<GuidedTours />}></Route>
+        <Route path="/guided-tours/:id" element={<GuidedTours />} />
         <Route path="/tickets" element={<Tickets />}></Route>
       </Routes>
       <Footer />
