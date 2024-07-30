@@ -9,7 +9,7 @@ const ExhibitionsInfo = () => {
   if (!exhibition) {
     return (
       <main>
-        <p>Exhibition not found</p>
+        <p style={{ margin: "8rem 20px" }}>Exhibition not found.</p>
       </main>
     );
   }

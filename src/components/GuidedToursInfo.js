@@ -3,6 +3,14 @@ import { Link } from "react-router-dom";
 import { MdArrowBack } from "react-icons/md";
 
 const GuidedToursInfo = ({ tour, onGoBack }) => {
+  if (!tour) {
+    return (
+      <main>
+        <p style={{ margin: "8rem 20px" }}>Guided tour not found.</p>
+      </main>
+    );
+  }
+
   return (
     <section className="section-guidedtoursinfo">
       <div className="header-guidedtoursinfo">
