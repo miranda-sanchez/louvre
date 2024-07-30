@@ -4,7 +4,7 @@ import { useSwipeable } from "react-swipeable";
 import { MdArrowBack, MdArrowForward } from "react-icons/md";
 import guidedTours from "../data/GuidedToursData";
 
-const GuidedTours = ({ onReadMore }) => {
+const GuidedToursSection = ({ onReadMore }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const navigate = useNavigate();
 
@@ -68,4 +68,4 @@ const GuidedTours = ({ onReadMore }) => {
   );
 };
 
-export default GuidedTours;
+export default GuidedToursSection;
