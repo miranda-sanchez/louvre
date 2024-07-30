@@ -54,7 +54,7 @@ nav .primary-navigation .tickets:hover {
   background-color: rgba(1, 102, 89, 0.9);
 }
 
-@media (max-width: 35em) {
+@media (max-width: 600px) {
   nav .mobile-nav-toggle-btn {
     display: block;
     position: absolute;
@@ -109,9 +109,7 @@ nav .primary-navigation .tickets:hover {
   flex-direction: column;
 }
 .Hero h1 {
-  font-size: 3rem;
-}
-.Hero h1 {
+  font-size: 2.5rem;
   max-width: 400px;
 }
 .Hero button {
@@ -123,15 +121,18 @@ nav .primary-navigation .tickets:hover {
   justify-content: flex-end;
 }
 .Hero figure img {
-  height: 60vh;
+  height: 65vh;
   margin-top: -100px;
-  padding-top: 0;
+  margin-right: -40px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 690px) {
   .Hero {
     padding-top: 5rem;
     flex-direction: row;
+  }
+  .Hero h1 {
+    font-size: 3rem;
   }
   .Hero figure {
     justify-content: center;
@@ -139,8 +140,14 @@ nav .primary-navigation .tickets:hover {
   }
   .Hero figure img {
     height: 90vh;
-    padding-top: 3rem;
+    padding-top: 100px;
     margin-top: 0;
+    margin-right: 0;
+  }
+}
+@media (min-width: 1180px) {
+  .Hero figure img {
+    height: 100vh;
   }
 }
 .Popular-exhibitions {

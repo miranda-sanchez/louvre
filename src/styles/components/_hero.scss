@@ -15,12 +15,10 @@
     @include flexbox(flex, space-around, center);
     flex-direction: column;
     h1 {
-        font-size: 3rem;
-    }
-
-    h1 {
+        font-size: 2.5rem;
         max-width: 400px;
     }
+
     button {
         margin-top: 1rem;
     }
@@ -31,27 +29,39 @@
         justify-content: flex-end;
         
         img {
-            height: 60vh;
+            height: 65vh;
             margin-top: -100px; 
-            padding-top: 0;
+            margin-right: -40px;
+
         }
     }
 }
 
-@media (min-width: 768px) { 
+@media (min-width: 690px) { 
     .Hero {
         padding-top: 5rem;
 
         flex-direction: row;
+        h1 {
+            font-size: 3rem;}
         figure {
             justify-content: center;
             width: auto;
             img {
                 height: 90vh;
-                padding-top: 3rem;
+                padding-top: 100px;
                 margin-top: 0; 
+                margin-right: 0;
             }
         }
     }
 
 }
+
+@media (min-width: 1180px) {
+    .Hero figure img {
+        height: 100vh;
+    }
+ }
+
+
