@@ -9,6 +9,10 @@ import img6 from "../img/img6.jpg";
 import img7 from "../img/img7.jpg";
 import img8 from "../img/img8.jpg";
 import img9 from "../img/img9.jpg";
+import img10 from "../img/img10.jpg";
+import img11 from "../img/img11.jpg";
+import img12 from "../img/img12.jpg";
+import img13 from "../img/img13.jpg";
 
 const Collection = () => {
   const items = [
@@ -57,7 +61,7 @@ const Collection = () => {
     {
       img: img8,
       title: "La Belle Ferronnière",
-      artist: "	Leonardo da Vinci or his Milanese circle, 1496",
+      artist: "Leonardo da Vinci or his Milanese circle, 1496",
       medium: "Oil on wood, 62cm × 44cm",
     },
     {
@@ -65,6 +69,30 @@ const Collection = () => {
       title: "Diana of Versailles",
       artist: "Anonymous, c. 325 BC",
       medium: "Marble, 2.01m",
+    },
+    {
+      img: img10,
+      title: "Liberty Leading the People",
+      artist: "Eugène Delacroix, 1830",
+      medium: "Oil on canvas, 260cm × 325cm",
+    },
+    {
+      img: img11,
+      title: "Oath of the Horatii",
+      artist: "Jacques-Louis David, 1784",
+      medium: "Oil on canvas, 329.8cm × 424.8cm",
+    },
+    {
+      img: img12,
+      title: "The Astronomer",
+      artist: "Johannes Vermeer, 1668",
+      medium: "Oil on canvas, 51cm × 45cm",
+    },
+    {
+      img: img13,
+      title: "The Intervention of the Sabine Women",
+      artist: "	Jacques-Louis David, 1799",
+      medium: "Oil on canvas, 385cm × 522cm",
     },
   ];
 
