@@ -7,14 +7,21 @@ import { MdNorthEast } from "react-icons/md";
 const Hero = () => {
   const heroTextRef = useRef();
   const figureRef = useRef();
+  const rellaxHeroText = useRef();
+  const rellaxFigure = useRef();
 
   useEffect(() => {
-    new Rellax(heroTextRef.current, {
-      speed: -5, // Velocidad para el div
+    rellaxHeroText.current = new Rellax(heroTextRef.current, {
+      speed: -5,
     });
-    new Rellax(figureRef.current, {
-      speed: 8, // Velocidad para el figure
+    rellaxFigure.current = new Rellax(figureRef.current, {
+      speed: 8,
     });
+
+    return () => {
+      rellaxHeroText.current.destroy();
+      rellaxFigure.current.destroy();
+    };
   }, []);
 
   return (

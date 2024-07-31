@@ -56,6 +56,11 @@ const exhibitions = [
     title: "Diego Velázquez",
     description: "Velazquez's private collection",
     date: "2 October to 23 December 2024",
+    paragraphs: [
+      "Diego Velázquez, one of the most important painters of the Spanish Golden Age, is celebrated for his masterful portraits, historical scenes, and depictions of the Spanish court. His work is characterized by its realistic detail, complex compositions, and profound psychological insight.",
+      "This permanent exhibition at the Louvre showcases a selection of Velázquez's private collection, including some of his lesser-known works and studies. The collection provides a unique insight into the artist's creative process and his influence on subsequent generations of painters.",
+      "Among the highlights of the exhibition are Velázquez's portraits of the Spanish royal family, which demonstrate his ability to capture both the physical likeness and the inner character of his subjects. Also featured are his mythological and religious scenes, which reveal his deep understanding of classical literature and theology.",
+    ],
   },
   {
     imgSrc: Degas,
@@ -64,6 +69,11 @@ const exhibitions = [
     description:
       "Degas's private collection of sculptures, drawings, and paintings",
     date: "6 August to 26 November 2024",
+    paragraphs: [
+      "Edgar Degas is renowned for his innovative and intimate portrayals of contemporary life, particularly his depictions of dancers, women at their toilette, and scenes of Parisian life. His work spans various media, including painting, sculpture, and drawing, and is marked by its dynamic composition and attention to movement and form.",
+      "This exhibition brings together a selection of Degas's private collection, offering a rare glimpse into the breadth of his artistic achievements. Visitors can explore his celebrated sculptures of dancers, which capture the grace and effort of ballet, as well as his expressive drawings and pastels, which reveal his keen observational skills and interest in the human figure.",
+      "Highlights of the exhibition include Degas's portraits of his friends and contemporaries, which provide a fascinating window into the artistic and social circles of late 19th-century Paris. The collection also includes some of his lesser-known works, offering a comprehensive view of his artistic evolution and enduring legacy.",
+    ],
   },
   {
     imgSrc: Michaelangelo,
@@ -72,6 +82,11 @@ const exhibitions = [
     description:
       "Degas's private collection of sculptures, drawings, and paintings",
     date: "31 July to 15 December 2024",
+    paragraphs: [
+      "Michelangelo Buonarroti, widely regarded as one of the greatest artists of all time, is celebrated for his contributions to the fields of sculpture, painting, and architecture. His work is characterized by its powerful expression, technical mastery, and profound impact on the art world.",
+      "This exhibition at the Louvre features a selection of Michelangelo's most famous works, including his sculptures, drawings, and paintings. Among the highlights are his iconic sculptures, which showcase his unparalleled ability to depict the human form with both anatomical precision and emotional depth.",
+      "The exhibition also includes some of Michelangelo's drawings, which provide insight into his creative process and his development of ideas. These works offer a unique perspective on the artist's genius and his influence on Renaissance art.",
+    ],
   },
 ];
 
