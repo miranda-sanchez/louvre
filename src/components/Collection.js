@@ -13,6 +13,9 @@ import img10 from "../img/img10.jpg";
 import img11 from "../img/img11.jpg";
 import img12 from "../img/img12.jpg";
 import img13 from "../img/img13.jpg";
+import img14 from "../img/img14.jpg";
+import img15 from "../img/img15.jpg";
+import img16 from "../img/img16.jpg";
 
 const Collection = () => {
   const items = [
@@ -91,8 +94,26 @@ const Collection = () => {
     {
       img: img13,
       title: "The Intervention of the Sabine Women",
-      artist: "	Jacques-Louis David, 1799",
+      artist: "Jacques-Louis David, 1799",
       medium: "Oil on canvas, 385cm × 522cm",
+    },
+    {
+      img: img14,
+      title: "Borghese Gladiator",
+      artist: "Agasias of Ephesus, c.100 BC",
+      medium: "Marble, 199cm",
+    },
+    {
+      img: img15,
+      title: "Portrait of Louis XIV in Coronation Robes",
+      artist: "Hyacinthe Rigaud, 1701",
+      medium: "Oil on canvas, 277cm × 194cm",
+    },
+    {
+      img: img16,
+      title: "The Young Beggar",
+      artist: "Bartolomé Esteban Murillo, c. 1650",
+      medium: "Oil on canvas, 134cm × 300cm",
     },
   ];
 
@@ -103,10 +124,9 @@ const Collection = () => {
   };
 
   const breakpointColumnsObj = {
-    default: 5,
-    1700: 4,
-    1300: 3,
-    850: 2,
+    default: 4,
+    1700: 3,
+    1200: 2,
     620: 1,
   };
 
