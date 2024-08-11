@@ -66,8 +66,7 @@ const exhibitions = [
     imgSrc: Degas,
     imgAlt: "Mary Cassatt at the Louvre by Degas",
     title: "Edgar Degas",
-    description:
-      "Degas's private collection of sculptures, drawings, and paintings",
+    description: "Degas's private collection of drawings, and paintings",
     date: "6 August to 26 November 2024",
     paragraphs: [
       "Edgar Degas is renowned for his innovative and intimate portrayals of contemporary life, particularly his depictions of dancers, women at their toilette, and scenes of Parisian life. His work spans various media, including painting, sculpture, and drawing, and is marked by its dynamic composition and attention to movement and form.",
@@ -80,7 +79,7 @@ const exhibitions = [
     imgAlt: "Sleeping Hermaphroditus by Michaelangelo",
     title: "Michaelangelo",
     description:
-      "Degas's private collection of sculptures, drawings, and paintings",
+      "Michaelangelo's private collection of sculptures, drawings, and paintings",
     date: "31 July to 15 December 2024",
     paragraphs: [
       "Michelangelo Buonarroti, widely regarded as one of the greatest artists of all time, is celebrated for his contributions to the fields of sculpture, painting, and architecture. His work is characterized by its powerful expression, technical mastery, and profound impact on the art world.",
